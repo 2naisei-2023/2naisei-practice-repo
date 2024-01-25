@@ -1,5 +1,5 @@
 /* global Vue */
-   const app = Vue.createapp({
+   const app = Vue.createApp({
     data: () => ({
         message:'HELLO Vue.js!'
     })
