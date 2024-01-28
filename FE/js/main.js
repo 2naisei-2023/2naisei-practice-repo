@@ -1,4 +1,4 @@
-/* global Vue */
+/* eslint-disable no-debugger */
    const app = Vue.createApp({
     data: () => ({
         message:'HELLO Vue.js!'
