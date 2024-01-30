@@ -7,11 +7,22 @@
      <link rel="stylesheet" href="../src/CSS/main.css">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title> <DOCUMENT> </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <script type="module" src="../src/main.js" defer></script>
     <div id="app">
        <p class="iro">{{message}}</p>
-    </div></div>
+    </div>
+<script>
+/*global Vue*/
+ var app = new Vue({
+  el: "#app",
+  data() {
+    return {
+      message: "Hello Vue.js"
+    }
+  }
+});
+    </script>
   </body>
 </html>
