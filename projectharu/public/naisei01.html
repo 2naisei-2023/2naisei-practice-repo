@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./main01.css">
+    <title>Hello,World!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+      <p class="color">{{message}}</p>
+    </div>
+    
+    <script>
+    /*global Vue*/
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello,World!'
+        }
+      });
+    </script>
+</body>
+</html>
