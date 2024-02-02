@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML MAKER</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="index.js" defer></script> -->
+      <style>
+         .border {
+        width: 300px;
+        padding: 10px;
+        margin: 20px;
+      }
+      .border-top {
+        border-top: 3px solid #000000;
+      }
+        </style>
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <div class="form-title">
+                <h2>移管に伴う特殊計上</h2>
+                  <div class="border border-top">上側にボーターを表示します</div>
+                <p>
+                    種目選択し【入力開始】ボタンをクリックしてください。
+                </p>
+            </div>
+            
+
+            <div class="input-flex">
+                <div class="input-control">
+                    <label for="FirstName" class="form-label required">FirstName</label>
+                    <input type="text" id="FirstName" name="FirstName" value="" class="form-input">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="LastName" class="form-label required">LastName</label>
+                    <input type="text" id="LastName" name="LastName" value="" class="form-input">
+                    <div class="error"></div>
+                </div>
+            </div>
+            <div class="input-flex">
+                <div class="input-control">
+                    <label for="BirthDate" class="form-label required">BirthDate</label>
+                    <input type="date" id="BirthDate" name="BirthDate" value="" class="form-input">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="From" class="form-label required">From</label>
+                    <input type="email" id="From" name="From" value="" class="form-input">
+                    <div class="error"></div>
+                </div>
+            </div>
+            <div class="input-control">
+                <label for="EmailAddress" class="form-label required">EmailAddress</label>
+                <input type="email" id="EmailAddress" name="EmailAddress" value="" class="form-input">
+                <div class="error"></div>
+            </div>
+            <div class="mb-3 input-control">
+                <label for="Password" class="form-label required">Password</label>
+                <input type="password" id="Password" name="Password" value="" class="form-input">
+                <div class="error"></div>
+            </div>
+            <div class="mb-3 input-control">
+                <label for="PasswordConfirm" class="form-label required">PasswordConfirm</label>
+                <input type="password" id="PasswordConfirm" name="PasswordConfirm" value="" class="form-input">
+                <div class="error"></div>
+            </div>
+            <div class="mb-3 input-control">
+                <label for="fruits" class="form-label">Favorite Fruits</label>
+                <select name="fruits" id="fruits" class="form-select">
+                    <option name="00">選択してください 。</option>
+                    <option name="01">りんご</option>
+                    <option name="02">もも</option>
+                    <option name="03">バナナ</option>
+                    <option name="04">梨</option>
+                    <option name="05">ぶどう</option>
+                    <option name="99">その他</option>
+                </select>
+                <div class="error"></div>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label required">種目</label>
+                <div class="radio-area input-control">
+                    <div style="text-align:left;" class="error"></div>
+                    <input type="radio" id="Item-1" name="Item" value="Item-1" class="radio-input">
+                    <label for="Item-1" class="radio-label">Item-1</label>
+                    <input type="radio" id="Item-2" name="Item" value="Item-2" class="radio-input">
+                    <label for="Item-2" class="radio-label">Item-2</label>
+                </div>
+            </div>
+            <div class="mb-3 input-control">
+                <label for="AcceptPolicy" class="checkbox-label">
+                    <input type="checkbox" id="AcceptPolicy" name="AcceptPolicy" value=""> &nbsp;AcceptPolicy is <a
+                        href="#">here</a>.
+                </label>
+                <div class="error"></div>
+            </div>
+            
+            <input type="submit" id="SubmitBtn" name="SubmitBtn" value="Sign Up" class="btn">
+        </form>
+    </div>
+    
+</body>
+
+</html>
