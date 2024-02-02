@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>証券番号の桁数チェック</title>
+</head>
+<body>
+    <!-- テキスト入力フィールド -->
+    <input type="text" id="securityNumberInput" placeholder="証券番号を入力してください">
+
+    <script>
+        // 入力フィールドの要素を取得
+        const inputField = document.getElementById('securityNumberInput');
+
+        // 入力フィールドに入力があった際のイベントリスナーを追加
+        inputField.addEventListener('input', function(event) {
+            // 入力された値を取得
+            const inputValue = event.target.value;
+
+            // 証券番号の桁数チェックを行う関数
+            function checkSecurityNumberLength(value) {
+                const expectedLength = 6; // 例: 証券番号は6桁であることをチェック
+                const actualLength = value.length;
+                if (actualLength !== expectedLength) {
+                    alert('証券番号は' + expectedLength + '桁である必要があります。');
+                } else {
+                    console.log('証券番号の桁数は正常です。');
+                }
+            }
+
+            // 証券番号の桁数チェックを実行
+            checkSecurityNumberLength(inputValue);
+        });
+    </script>
+</body>
+</html>
