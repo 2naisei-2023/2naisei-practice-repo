@@ -1,23 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" href="./main01.css">
-    <title>Hello,World!</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML MAKER</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="index.js" defer></script> -->
+      <style>
+         .border {
+        width: 300px;
+        padding: 10px;
+        margin: 20px;
+      }
+      .border-top {
+        border-top: 3px solid #000000;
+      }
+        </style>
+    
 </head>
+
 <body>
-    <div id="app">
-      <p class="color">{{message}}</p>
+    <div class="wrapper">
+        <form action="#">
+            <div class="form-title">
+                <h2>移管に伴う特殊計上</h2>
+                 
+                <p>
+                    種目選択し【入力開始】ボタンをクリックしてください。
+                </p>
+            </div>
+            
+
+             <div class="mb-3">
+                <label for="" class="form-label required">種目</label>
+                <div class="radio-area input-control">
+                    <div style="text-align:left;" class="error"></div>
+                    <input type="radio" id="Item-1" name="Item" value="Item-1" class="radio-input">
+                    <label for="Item-1" class="radio-label">自動車</label>
+                    <input type="radio" id="Item-2" name="Item" value="Item-2" class="radio-input">
+                    <label for="Item-2" class="radio-label">超保険</label>
+                </div>
+            </div>
+            
+              <div class="form-title2">
+                <h2>中断再開</h2>
+                 
+                <p>
+                    中断再開する特殊計上番号を入力し【中断再開】ボタンをクリックしてください。
+                </p>
+            </div>
+            
+            
+            <div class="input-flex">
+                <div class="input-control">
+                    <label for="FirstName" class="form-label required">キー番号</label>
+                    <input type="text" id="FirstName" name="FirstName" value="" class="form-input">
+                    <div class="error"></div>
+                </div>
+               
+            </div>
+          
+            
+           
+
+            
+            <input type="submit" id="SubmitBtn" name="SubmitBtn" value="Sign Up" class="btn">
+        </form>
     </div>
     
-    <script>
-    /*global Vue*/
-      var app = new Vue({
-        el: '#app',
-        data: {
-          message: 'Hello,World!'
-        }
-      });
-    </script>
 </body>
+
 </html>
