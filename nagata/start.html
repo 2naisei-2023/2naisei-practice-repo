@@ -1,38 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>証券番号の桁数チェック</title>
-</head>
-<body>
-    <!-- テキスト入力フィールド -->
-    <input type="text" id="securityNumberInput" placeholder="証券番号を入力してください">
+    <title>HTML MAKER</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="index.js" defer></script> -->
+    <style>
+        .border {
+            width: 300px;
+            padding: 10px;
+            margin: 20px;
+        }
 
+        .border-top {
+            border-top: 3px solid #000000;
+        }
+
+        .radio-area .radio-input {
+            /* display: none; 削除 */
+        }
+
+        .radio-area .radio-label {
+            display: block;
+            margin-bottom: 10px; /* ラベル間の余白を追加 */
+        }
+    </style>
     <script>
-        // 入力フィールドの要素を取得
-        const inputField = document.getElementById('securityNumberInput');
-
-        // 入力フィールドに入力があった際のイベントリスナーを追加
-        inputField.addEventListener('input', function(event) {
-            // 入力された値を取得
-            const inputValue = event.target.value;
-
-            // 証券番号の桁数チェックを行う関数
-            function checkSecurityNumberLength(value) {
-                const expectedLength = 6; // 例: 証券番号は6桁であることをチェック
-                const actualLength = value.length;
-                if (actualLength !== expectedLength) {
-                    alert('証券番号は' + expectedLength + '桁である必要があります。');
+        document.addEventListener('DOMContentLoaded', function () {
+            // フォームの送信イベントを拾って画面遷移を実行
+            document.getElementById('SubmitBtn').addEventListener('click', function (event) {
+                // 選択されたラジオボタンの値を取得
+                var selectedItem = document.querySelector('input[name="Item"]:checked');
+                if (selectedItem && selectedItem.value === 'Item-1') {
+                    // Item-1が選択されたらindex.htmlに画面遷移
+                    window.location.href = 'end.html';
                 } else {
-                    console.log('証券番号の桁数は正常です。');
+                    // ラジオボタンが選択されていないか、Item-1以外が選択された場合の処理
+                    alert('自動車を選択してください。');
                 }
-            }
 
-            // 証券番号の桁数チェックを実行
-            checkSecurityNumberLength(inputValue);
+                // キー番号の入力値を取得
+                var keyNumber = document.getElementById('FirstName').value;
+
+                // 半角英数以外の文字が含まれているかチェック
+                if (!/^[a-zA-Z0-9]+$/.test(keyNumber)) {
+                    alert('キー番号には半角英数のみを入力してください。');
+                    event.preventDefault(); // デフォルトのフォーム送信を防ぐ
+                }
+            });
         });
     </script>
-</body>
-</html>
+</head>
 
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <div class="form-title">
+                <h2>移管に伴う特殊計上</h2>
+                <div class="border border-top"></div>
+                <p>
+                    種目選択し【入力開始】ボタンをクリックしてください。
+                </p>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="" class="form-label required">種目</label>
+                <div class="radio-area input-control">
+                    <div style="text-align:left;" class="error"></div>
+                    <input type="radio" id="Item-1" name="Item" value="Item-1" class="radio-input">
+                    <label for="Item-1" class="radio-label">自動車</label>
+
+                    <input type="radio" id="Item-2" name="Item" value="Item-2" class="radio-input">
+                    <label for="Item-2" class="radio-label">超保険</label>
+                </div>
+            </div>
+
+            <div class="form-title2">
+                <h2>中断再開</h2>
+                <p>
+                    中断再開する特殊計上番号を入力し【中断再開】ボタンをクリックしてください。
+                </p>
+            </div>
+
+            <div class="input-flex">
+                <div class="input-control">
+                    <label for="FirstName" class="form-label required">キー番号</label>
+                    <input type="text" id="FirstName" name="FirstName" value="" class="form-input">
+                    <div class="error"></div>
+                </div>
+            </div>
+
+            <input type="submit" id="SubmitBtn" name="SubmitBtn" value="Sign Up" class="btn">
+        </form>
+    </div>
+</body>
+
+</html>
