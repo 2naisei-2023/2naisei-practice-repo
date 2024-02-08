@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse; /* ボーダーを重ねないように設定 */
+        }
+
+        th, td {
+            border: 1px solid black; /* セルのボーダーを設定 */
+            padding: 10px; /* セルの内側の余白を設定 */
+            text-align: center; /* セルの中央揃え */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+            <th>Header 4</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Data 1</td> <!-- 2行に結合 -->
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+        </tr>
+        <tr>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 7</td>
+        </tr>
+        <tr>
+            <td>Data 8</td>
+            <td>Data 9</td>
+            <td>Data 10</td>
+            <td>Data 11</td>
+        </tr>
+    </table>
+</body>
+</html>
