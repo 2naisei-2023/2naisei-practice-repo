@@ -39,13 +39,9 @@ checkInputLength(userInput);
 
 
 /*半角数字で入力されているか確認｀*/
-function checkHalfWidthNumeric(inputString) {
+function isHalfWidthNumeric(inputString) {
     // 半角数字の正規表現を使用してチェック
-    if (/^[0-9]+$/.test(inputString)) {
-        return true; // 半角数字のみ
-    } else {
-        return false; // 全角文字が含まれている
-    }
+    return /^[0-9]+$/.test(inputString);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -54,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     inputElement.addEventListener('input', function () {
         var inputValue = inputElement.value;
 
-        if (!checkHalfWidthNumeric(inputValue)) {
+        if (!isHalfWidthNumeric(inputValue)) {
             alert('半角数字で入力してください');
             // または、エラーメッセージを表示する他の方法を選択
             // 例: エラーメッセージを表示するための特定の要素にメッセージを設定する
