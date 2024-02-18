@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>開始画面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <div class="form-title">
+                <h2>移管に伴う特殊計上</h2>
+                <hr> <!-- ここで線を追加 -->
+                <div class="border border-top"></div>
+                <p>
+                    種目選択し【入力開始】ボタンをクリックしてください。
+                </p>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="" class="form-label required">種目</label>
+                <div class="radio-area input-control">
+                    <div style="text-align:left;" class="error"></div>
+                    <input type="radio" id="Item-1" name="Item" value="Item-1" class="radio-input">
+                    <label for="Item-1" class="radio-label">自動車</label>
+
+                    <input type="radio" id="Item-2" name="Item" value="Item-2" class="radio-input">
+                    <label for="Item-2" class="radio-label">超保険</label>
+                </div>
+            </div>
+
+            <div class="form-title2">
+                <h2>中断再開</h2>
+                <hr> <!-- ここで線を追加 -->
+                <p>
+                    中断再開する特殊計上番号を入力し【中断再開】ボタンをクリックしてください。
+                </p>
+            </div>
+
+            <div class="input-flex">
+                <div class="input-control">
+                    <label for="FirstName" class="form-label required">キー番号</label>
+                    <input type="text" id="FirstName" name="FirstName" value="" class="form-input">
+                    <div class="error"></div>
+                </div>
+            </div>
+
+            <input type="submit" id="SubmitBtn" name="SubmitBtn" value="入力開始" class="btn">
+        </form>
+    </div>
+</body>
+
+</html>
