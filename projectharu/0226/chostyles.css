@@ -1,0 +1,32 @@
+hr {
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 40px; /* 下の余白を20pxに設定 */
+}
+
+body {
+    background-color: lightblue; /* 薄い水色に設定 */
+}
+
+ th {
+            background-color: lightgray; /* ヘッダーの背景色を設定 */
+        }
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    flex-basis: calc(33.33% - 10px); /* 幅を均等にする */
+    margin-bottom: 10px; /* ボタン間のマージン */
+}
+
+@media screen and (max-width: 600px) {
+    .btn {
+        flex-basis: 100%; /* 画面が小さい場合はボタンをフル幅にする */
+    }
+    
+}
