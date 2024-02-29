@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Page Navigation</title>
+</head>
+
+<body>
+    <form id="radioForm">
+        <input type="radio" id="page1" name="pages" value="page1">
+        <label for="page1">Page 1</label>
+
+        <input type="radio" id="page2" name="pages" value="page2">
+        <label for="page2">Page 2</label>
+
+        <input type="radio" id="page3" name="pages" value="page3">
+        <label for="page3">Page 3</label>
+
+        <button type="button" onclick="navigateToSelectedPage()">Go to Selected Page</button>
+    </form>
+
+    <script>
+        function navigateToSelectedPage() {
+            // 選択されたラジオボタンの値を取得
+            var selectedPage = document.querySelector('input[name="pages"]:checked');
+
+            // ラジオボタンが選択されていない場合の処理
+            if (!selectedPage) {
+                alert('ページを選択してください。');
+                return;
+            }
+
+            // 選択されたラジオボタンの値に基づいて遷移
+            window.location.href = selectedPage.value + '.html';
+        }
+    </script>
+</body>
+
+</html>
