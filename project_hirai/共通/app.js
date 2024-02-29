@@ -13,15 +13,31 @@ function pageInputTransition(){
    // 選択されたラジオボタンの値を取得
             var selectedPage = document.querySelector('input[name="sentaku"]:checked');
 
-            // ラジオボタンが選択されていない場合の処理
-            if (!selectedPage) {
-                alert('ページを選択してください。');
-                return;
-            }
-
             // 選択されたラジオボタンの値に基づいて遷移
             window.location.href = selectedPage.value + '.html';
 }
+
+
+/*種目選択しているか｀*/
+function validateSelection() {
+    // ラジオボタンの要素を取得
+    var radioButton1 = document.getElementById("car");
+    var radioButton2 = document.getElementById("cho");
+    
+    // どちらのラジオボタンも選択されていない場合にアラートを表示
+    if (!radioButton1.checked && !radioButton2.checked) {
+        alert("種目を選択してください。");
+        return false; // 送信をキャンセル
+    }
+    return true; // 送信を許可
+}
+
+/*入力開始ボタン押下時に種目選択とページ遷移の関数２つを呼び込む*/
+function callTwoFunctions() {
+            // 2つの関数を呼び出す
+            validateSelection();
+            pageInputTransition();
+        }
 
 /*完了画面へ遷移｀*/
 function pageEndTransition(){
@@ -39,19 +55,6 @@ function pageInterruptTransition(){
     window.location.href = url;
 }
 
-/*種目選択しているか｀*/
-function validateSelection() {
-    // ラジオボタンの要素を取得
-    var radioButton1 = document.getElementById("car");
-    var radioButton2 = document.getElementById("cho");
-    
-    // どちらのラジオボタンも選択されていない場合にアラートを表示
-    if (!radioButton1.checked && !radioButton2.checked) {
-        alert("種目を選択してください。");
-        return false; // 送信をキャンセル
-    }
-    return true; // 送信を許可
-}
 
 /*１０文字で入力しているか｀*/
 function checkInputLength10(inputText) {

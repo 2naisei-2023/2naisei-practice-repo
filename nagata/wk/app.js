@@ -7,14 +7,14 @@ function pageStartTransition(){
     window.location.href = url;
 }
 
+
 /*入力画面へ遷移｀*/
 function pageInputTransition(){
-    if (validateSelection()) {
-        //遷移先のURL
-         var url = 'input.html';
-        // ページ遷移
-         window.location.href = url;
-    }
+   // 選択されたラジオボタンの値を取得
+            var selectedPage = document.querySelector('input[name="sentaku"]:checked');
+
+            // 選択されたラジオボタンの値に基づいて遷移
+            window.location.href = selectedPage.value + '.html';
 }
 
 /*完了画面へ遷移｀*/
