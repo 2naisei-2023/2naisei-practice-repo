@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Digit Validation</title>
+</head>
+
+<body>
+    <form>
+        <label for="inputField1">Field 1 (4-digit Number):</label>
+        <input type="text" id="inputField1" name="inputField1" maxlength="4">
+        <div id="error-message1" style="color: red;"></div>
+
+        <label for="inputField2">Field 2 (6-digit Number):</label>
+        <input type="text" id="inputField2" name="inputField2" maxlength="6">
+        <div id="error-message2" style="color: red;"></div>
+
+    </form>
+
+    <script>
+        function validateInput(inputId, errorMessageId, expectedLength) {
+            var inputField = document.getElementById(inputId).value.trim();
+            var errorMessageElement = document.getElementById(errorMessageId);
+
+            // 入力が期待される桁数の数字であるかをチェック
+            if (new RegExp(`^\\d{${expectedLength}}$`).test(inputField)) {
+                errorMessageElement.textContent = ''; // エラーメッセージをクリア
+            } else {
+                errorMessageElement.textContent = `${expectedLength}桁の数字を入力してください。`;
+            }
+        }
+
+        // カーソルが離れたときに桁数チェックを行う
+        document.getElementById('inputField1').addEventListener('blur', function () {
+            validateInput('inputField1', 'error-message1', 4);
+        });
+
+        document.getElementById('inputField2').addEventListener('blur', function () {
+            validateInput('inputField2', 'error-message2', 6);
+        });
+
+        // 各項目に対するblurイベントを追加
+    </script>
+</body>
+
+</html>
