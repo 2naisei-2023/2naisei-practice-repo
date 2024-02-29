@@ -101,8 +101,13 @@ document.getElementById('inputField1').addEventListener('blur', function () {
 });
 
 document.getElementById('inputField2').addEventListener('blur', function () {
-    validateInput('inputField2', 6, 'error-message2');
+    validateInput('inputField2', 5, 'error-message2');
 });
+
+document.getElementById('inputField3').addEventListener('blur', function () {
+    validateInput('inputField3', 2, 'error-message2');
+});
+
 
 // カーソルが合わせられたときにチェックが実行されないように修正
 document.getElementById('inputField1').addEventListener('focus', function () {
