@@ -56,32 +56,6 @@ function pageInterruptTransition(){
 }
 
 
-/*１０文字で入力しているか｀*/
-function checkInputLength10(inputText) {
-    if (inputText.length != 10) {
-        alert("10字で入力してください");
-    } else{
-        return;
-    }
-}
-    
-    /*5文字で入力しているか｀*/
-function checkInputLength5(inputText) {
-    if (inputText.length != 5) {
-        alert("5字で入力してください");
-    } else{
-        return;
-    }
-}
-        
-/*4文字で入力しているか｀*/
-function checkInputLength4(inputText) {
-    if (inputText.length != 4) {
-        alert("4字で入力してください");
-    } else{
-        return;
-    }
-}
 
 /*半角英数字で入力されているか確認*/
 function isAlphaNumeric(inputString) {
@@ -89,25 +63,8 @@ function isAlphaNumeric(inputString) {
     return /^[a-zA-Z0-9]+$/.test(inputString);
 }
 
-
-
-
-
 /*英数字と桁数のチェック*/
 /*桁数チェック関数*/
-// カーソルが離れたときに桁数チェックを行う
-document.getElementById('inputField1').addEventListener('blur', function () {
-    validateInput('inputField1', 10, 'error-message1');
-});
-
-document.getElementById('inputField2').addEventListener('blur', function () {
-    validateInput('inputField2', 5, 'error-message2');
-});
-
-document.getElementById('inputField3').addEventListener('blur', function () {
-    validateInput('inputField3', 2, 'error-message3');
-});
-
 
 // カーソルが合わせられたときにチェックが実行されないように修正
 document.getElementById('inputField1').addEventListener('focus', function () {
@@ -117,6 +74,12 @@ document.getElementById('inputField1').addEventListener('focus', function () {
 });
 
 document.getElementById('inputField2').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
+document.getElementById('inputField3').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
