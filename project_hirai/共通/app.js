@@ -105,7 +105,7 @@ document.getElementById('inputField2').addEventListener('blur', function () {
 });
 
 document.getElementById('inputField3').addEventListener('blur', function () {
-    validateInput('inputField3', 2, 'error-message2');
+    validateInput('inputField3', 2, 'error-message3');
 });
 
 
