@@ -62,3 +62,28 @@ function validateInput(inputId, inputValue, expectedLength) {
         }
     }
 }
+
+
+
+ // イベントリスナーを追加
+        var calculationInputs = document.getElementsByClassName('calculation-input');
+        for (var i = 0; i < calculationInputs.length; i++) {
+            calculationInputs[i].addEventListener('input', calculateTotal);
+        }
+
+        // 合計を計算する関数
+        function calculateTotal() {
+            var total = 0;
+
+            for (var i = 0; i < calculationInputs.length; i++) {
+                var inputValue = calculationInputs[i].value.trim();
+
+                // 空白でない場合、数値に変換して合計に加算
+                if (inputValue !== "") {
+                    total += parseFloat(inputValue);
+                }
+            }
+
+            // 結果を表示するフィールドにセット
+            document.getElementById('totalResult').value = total;
+        }
