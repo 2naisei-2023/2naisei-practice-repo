@@ -85,6 +85,18 @@ document.getElementById('inputField3').addEventListener('focus', function () {
     this.addEventListener('blur', handleBlur);
 });
 
+
+document.getElementById('inputField4').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
+document.getElementById('inputField5').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
 function handleBlur() {
     validateInput(this.id, this.maxLength, `error-message${this.id.slice(-1)}`);
 }
@@ -100,3 +112,5 @@ function validateInput(inputId, expectedLength, errorMessageId) {
         alert(`${expectedLength}桁で入力してください。`);
     }
 }
+
+
