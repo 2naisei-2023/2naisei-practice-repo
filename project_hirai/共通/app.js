@@ -121,14 +121,13 @@ document.getElementById('meisai12').addEventListener('focus', function () {
 });
 
 
-
 function handleBlur() {
-    validateInput(this.id, this.maxLength, `error-message${this.id.slice(-1)}`);
+    validateInput(this.id, this.maxLength,);
 }
 
-function validateInput(inputId, expectedLength, errorMessageId) {
+function validateInput(inputId, expectedLength) {
     var inputField = document.getElementById(inputId).value.trim();
-    var errorMessageElement = document.getElementById(errorMessageId);
+    
 
     // 入力が期待される桁数の英数字であるかをチェック
     if (!isAlphaNumeric(inputField)) {
