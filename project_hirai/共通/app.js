@@ -105,6 +105,23 @@ document.getElementById('inputField22').addEventListener('focus', function () {
     this.addEventListener('blur', handleBlur);
 });
 
+//自動車
+// カーソルが合わせられたときにチェックが実行されないように修正
+document.getElementById('shouban12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
+// カーソルが合わせられたときにチェックが実行されないように修正
+document.getElementById('meisai12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
+
+
 function handleBlur() {
     validateInput(this.id, this.maxLength, `error-message${this.id.slice(-1)}`);
 }
