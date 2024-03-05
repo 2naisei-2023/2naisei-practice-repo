@@ -1,4 +1,4 @@
-document.getElementById('zisin').addEventListener('focus', function () {
+document.getElementById('zisinuwanose1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
@@ -12,32 +12,32 @@ document.getElementById('zisin1').addEventListener('focus', function () {
 });
 
 
-document.getElementById('hansou').addEventListener('focus', function () {
+document.getElementById('hansou1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
 
-document.getElementById('fami').addEventListener('focus', function () {
+document.getElementById('fami1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
-document.getElementById('dap').addEventListener('focus', function () {
+document.getElementById('dap1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
-document.getElementById('home').addEventListener('focus', function () {
+document.getElementById('home1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
-document.getElementById('koshou').addEventListener('focus', function () {
+document.getElementById('koshou1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);

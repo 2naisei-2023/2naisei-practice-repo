@@ -67,32 +67,32 @@ function isAlphaNumeric(inputString) {
 /*桁数チェック関数*/
 
 // カーソルが合わせられたときにチェックが実行されないように修正
-document.getElementById('inputField1').addEventListener('focus', function () {
+document.getElementById('shokenbanngou1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
-document.getElementById('inputField2').addEventListener('focus', function () {
+document.getElementById('meisai1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
-document.getElementById('inputField3').addEventListener('focus', function () {
+document.getElementById('shumoku1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
 
-document.getElementById('inputField4').addEventListener('focus', function () {
+document.getElementById('eigyou1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
-document.getElementById('inputField5').addEventListener('focus', function () {
+document.getElementById('keiyaksuha1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
