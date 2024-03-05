@@ -81,7 +81,7 @@ function isAlphaNumeric(inputString) {
 // カーソルが合わせられたときにチェックが実行されないように修正
 document.getElementById('shokenbanngou1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
+    //this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
