@@ -104,6 +104,13 @@ document.getElementById('eigyou1').addEventListener('focus', function () {
     this.addEventListener('blur', handleBlur);
 });
 
+
+document.getElementById('eigyou2').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
 document.getElementById('keiyaksuha1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
