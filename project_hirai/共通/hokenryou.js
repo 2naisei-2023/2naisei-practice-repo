@@ -58,10 +58,10 @@ document.getElementById('koshousongai1').addEventListener('focus', function () {
 //
 
 function handleBlur() {
-    validateInput(this.id, this.value, this.maxLength);
+    validateInput(this.id, this.value);
 }
 
-function validateInput(inputId, inputValue, expectedLength) {
+function validateInput(inputId, inputValue) {
     // 正規表現で数字のみを検証
     var isNumeric = /^[0-9]+$/.test(inputValue);
 
