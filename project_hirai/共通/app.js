@@ -147,26 +147,14 @@ document.getElementById('dairi2').addEventListener('focus', function () {
 });
 
 
-document.getElementById('keiyaksuha1').addEventListener('focus', function () {
+document.getElementById('keiyakusha1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
 
-document.getElementById('inputField22').addEventListener('focus', function () {
-    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
-});
 
-//自動車
-// カーソルが合わせられたときにチェックが実行されないように修正
-document.getElementById('shouban12').addEventListener('focus', function () {
-    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
-});
 
 
 
