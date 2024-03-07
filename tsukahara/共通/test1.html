@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form to AWS Lambda</title>
+</head>
+<body>
 
+<h1>HTML Form to AWS Lambda</h1>
+<form id="myForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age"><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // フォームのデフォルトの送信を防止
+
+        // フォームの入力値を取得
+        const name = document.getElementById("name").value;
+        const age = parseInt(document.getElementById("age").value);
+
+        // 入力値をJSON形式に変換
+        const jsonData = JSON.stringify({ "name": name, "age": age });
+
+        // Lambda関数にデータを送信するためのAPI Gatewayのエンドポイント
+        const apiUrl = 'https://yimkqk8xbb.execute-api.ap-northeast-1.amazonaws.com/test1_tsukahara/Lambda';
+
+        // API GatewayにPOSTリクエストを送信
+        fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: jsonData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            // ここで必要な処理を実行
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+
+</body>
+</html>
