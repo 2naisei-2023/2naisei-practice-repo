@@ -1,67 +1,67 @@
 document.getElementById('kihon1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 
 document.getElementById('bengo1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 
 document.getElementById('hansou1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 
 document.getElementById('fami1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 document.getElementById('dap1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 document.getElementById('houzin1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 document.getElementById('bengosi1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 document.getElementById('phyd1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 document.getElementById('koshousongai1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', handleBlur);
-    this.addEventListener('blur', handleBlur);
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 //
 
-function handleBlur() {
-    validateInput(this.id, this.value);
+function hokenryouHandleBlur() {
+    validateInput1(this.id, this.value);
 }
 
-function validateInput(inputId, inputValue) {
+function validateInput1(inputId, inputValue) {
     // 正規表現で数字のみを検証
     var isNumeric = /^[0-9]+$/.test(inputValue);
 
