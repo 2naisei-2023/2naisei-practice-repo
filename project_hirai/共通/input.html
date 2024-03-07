@@ -86,13 +86,13 @@
             <td>
                 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select1" onchange="updateSelect('select1', 'select2')">
+                                <option value="plus">＋</option>
+                                <option value="minus">－</option>
                             </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select2" onchange="updateSelect('select2', 'select1')">
+                                <option value="minus">－</option>
+                                <option value="plus">＋</option>
                             </select>
                         </div>
                          <input type="text" id="totalResult"readonly>
@@ -103,16 +103,7 @@
             <!-- 基本保険料 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
+                       
                         <input type="text" class="calculation-input" id="kihon1" name="kihon1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -122,16 +113,6 @@
             <!-- 弁護士自動車 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text" class="calculation-input"id="bengo1" name="bengo1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -141,16 +122,6 @@
             <!-- 搬送 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text" class="calculation-input"id="hansou1" name="hansou1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -159,16 +130,6 @@
             <!-- ふぁみばい -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text" class="calculation-input"id="fami1" name="fami1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -178,16 +139,6 @@
             <!-- 個賠 -->
             <td>
                  <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text" class="calculation-input"id="kobai1" name="kobai1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -197,16 +148,7 @@
            <!-- DAP保険料 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
+                       
                        <input type="text" class="calculation-input"id="dap1" name="dap1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -215,16 +157,6 @@
            <!-- 法人DA -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text" class="calculation-input"id="houzin1" name="houzin1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -234,16 +166,6 @@
              <!-- 弁護士 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                        <input type="text" class="calculation-input"id="bengosi1" name="bengosi1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -252,16 +174,6 @@
              <!-- PHYD保険料 -->
              <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                        <input type="text" class="calculation-input"id="phyd1" name="phyd1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -270,16 +182,6 @@
             <!-- 故障損害補償保険料　-->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text" class="calculation-input"id="koshousongai1" name="koshousongai1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -341,16 +243,6 @@
             <!-- 基本保険料 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -359,16 +251,6 @@
             <!-- 弁護士自動車 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -377,16 +259,6 @@
             <!-- 搬送 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -394,16 +266,6 @@
             <!-- ふぁみばい -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -412,16 +274,6 @@
             <!-- 個賠 -->
             <td>
                  <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -430,16 +282,6 @@
            <!-- DAP保険料 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -447,16 +289,6 @@
            <!-- 法人DA -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -465,16 +297,6 @@
              <!-- 弁護士 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -482,16 +304,6 @@
              <!-- PHYD保険料 -->
              <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -499,16 +311,6 @@
             <!-- 故障損害補償保険料　-->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -567,16 +369,6 @@
             <!-- 基本保険料 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -585,16 +377,6 @@
             <!-- 弁護士自動車 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -603,16 +385,6 @@
             <!-- 搬送 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -620,16 +392,6 @@
             <!-- ふぁみばい -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -638,16 +400,6 @@
             <!-- 個賠 -->
             <td>
                  <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -656,16 +408,6 @@
            <!-- DAP保険料 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -673,16 +415,6 @@
            <!-- 法人DA -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -691,16 +423,6 @@
              <!-- 弁護士 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -708,16 +430,6 @@
              <!-- PHYD保険料 -->
              <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>
@@ -725,16 +437,6 @@
             <!-- 故障損害補償保険料　-->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
                         <input type="text">
                     </div>
             </td>

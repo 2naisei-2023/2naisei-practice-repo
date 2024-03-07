@@ -1,3 +1,5 @@
+
+
 document.getElementById('kihon1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
@@ -55,6 +57,14 @@ document.getElementById('koshousongai1').addEventListener('focus', function () {
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
+function updateSelect(changedSelectId, targetSelectId) {
+  // 変更されたセレクトボックスの値を取得
+  var selectedValue = document.getElementById(changedSelectId).value;
+
+  // もう片方のセレクトボックスに逆の値を設定
+  var targetSelect = document.getElementById(targetSelectId);
+  targetSelect.value = (selectedValue === 'plus') ? 'minus' : 'plus';
+}
 //
 
 function hokenryouHandleBlur() {
