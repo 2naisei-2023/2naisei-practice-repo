@@ -39,42 +39,40 @@
             </tr>
         </thead>
         <tbody>
-            <!-- 7行分の入力フィールド -->
             <tr>
-                <td rowspan="2">1 2</td>
-                <td rowspan="2">
-                    <!--証券番号-->
-                    <input type="text" id="shokenbanngou1" name="shokenbanngou1" maxlength="10">
+                <td>1 2<name="renban"></name></td>
+                  <!--証券番号-->
+                <td>
+                    <input type="text" id="choshokenbanngou12" name="choshokenbanngou12" maxlength="10">
                 <script src="app.js"></script>
                 </td>
-                <!-- 各列に入力フィールドを追加 -->
-                <!-- 必要に応じて同様の行を繰り返す -->
-                <td rowspan="2"> 
-                <!--明細番号-->
-                    <input type="text" id="meisai1" name="meisai1" maxlength="5">
+               <!-- 明細 -->
+                <td> 
+                    <input type="text" id="chomeisai12" name="chomeisai12" maxlength="5">
                 <script src="app.js"></script>
                  </td>
-                <td><input type="text"></td>
+                 <!--補償種目-->
+                <td><input type="text" id="hoshou12" name="hoshou12" maxlength="4"></td>
                 
                 <!--種目種類コード-->
                 <td>
-                    <input type="text" id="shumoku1" name="shumoku1" maxlength="2">
+                    <input type="text" id="shumoku12" name="shumoku12" maxlength="2">
                  <script src="app.js"></script>
                  </td>
                  
                  <!--営業店コード-->
-                <td><input type="text" id="eigyou1" name="eigyou1" maxlength="4">
+                <td><input type="text" id="choeigyou1" name="choeigyou1" maxlength="4">
                  <script src="app.js"></script>
                  </td>
                  <!--代理店コード-->
-                <td rowspan="2"><input type="text"></td>
+                <td><input type="text" id="chodairi1" name="chodairi1" maxlength="4"></td>
                 <!--契約者コード-->
-                <td rowspan="2"> 
-                    <input type="text" id="keiyakusha1" name="keiyakusha1" maxlength="5">
+                <td> 
+                    <input type="text" id="chokeiyakusha1" name="chokeiyakusha1" maxlength="5">
                  <script src="app.js"></script>
                 </td>
                 <!--是正区分-->
-                <td rowspan="2"> 
+                <td> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
                             <select>
@@ -90,181 +88,119 @@
                     </div>
                 </td>
                 <!--追加・返還保険料-->
-                <td rowspan="2"> 
+                <td> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select1" onchange="updateSelect('select1', 'select2')">
+                                <option value="plus">＋</option>
+                                <option value="minus">－</option>
                             </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select2" onchange="updateSelect('select2', 'select1')">
+                                <option value="minus">－</option>
+                                 <option value="plus">＋</option>
                             </select>
                         </div>
-                       <input type="text" id="totalResult" readonly>
+                         <input type="text" id="chototalResult"readonly>
                     </div>
                 </td>
                 
                 <!--基本保険料-->
             
-                <td rowspan="2"> 
+                <td> 
                 　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                         <input type="text" class="calculation-input" id="chokihon1" name="chokihon1" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--地震上乗せ保険料-->
                 <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text" class="calculation-input"id="zisinuwanose1" name="zisinuwanose1" maxlength="11">
+                 <div style="display: flex;">
+                        <input type="text" class="calculation-input"id="zisinuwa1" name="zisinuwa1" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 
                 <!--地震保険料-->
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
+                <td> 
+                 <div style="display: flex;">
                         <input type="text"class="calculation-input" id="zisin1" name="zisin1" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 
                 <!-- 搬送応急・レンタ費用等補償保険料-->
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                         <input type="text"class="calculation-input" id="hansou1" name="hansou1" maxlength="11">
+                <td> 
+                 <div style="display: flex;">
+                         <input type="text"class="calculation-input" id="chohansou1" name="chohansou1" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--ファミバイ保険料-->
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                          <input type="text"class="calculation-input" id="fami1" name="fami1" maxlength="11">
+                <td> 
+                 <div style="display: flex;">
+                          <input type="text"class="calculation-input" id="chofami1" name="chofami1" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--DAP保険料-->
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text"class="calculation-input" id="dap1" name="dap1" maxlength="11">
+                <td> 
+                 <div style="display: flex;">
+                        <input type="text"class="calculation-input" id="chodap1" name="chodap1" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--ホームサイバー・特定設備水災・水災初期費用保険料-->
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
+                <td>
+                     <div style="display: flex;">
                           <input type="text"class="calculation-input" id="home1" name="home1" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--故障損害補償保険料-->
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                       <input type="text"class="calculation-input" id="koshou1" name="koshou1" maxlength="11">
+                <td> 
+                　  <div style="display: flex;">
+                       <input type="text"class="calculation-input" id="chokoshou1" name="chokoshou1" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 
-            <tr>
-               <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-            </tr>
-            
-             <tr>
-                <td rowspan="2">3 4</td>
-                <td rowspan="2"> <!--証券番号-->
-                    <input type="text" id="inputField22" name="inputField22" maxlength="10">
+           </tr>
+           
+           <!--2行目-->
+           <tr>
+                <td>3 4<name="renban"></name></td>
+                  <!--証券番号-->
+                <td>
+                    <input type="text" id="choshokenbanngou34" name="choshokenbanngou34" maxlength="10">
                 <script src="app.js"></script>
                 </td>
-                <!-- 各列に入力フィールドを追加 -->
-                <!-- 必要に応じて同様の行を繰り返す -->
-                <td rowspan="2"><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td rowspan="2"><input type="text"></td>
-                <td rowspan="2"> 
+               <!-- 明細 -->
+                <td> 
+                    <input type="text" id="chomeisai34" name="chomeisai34" maxlength="5">
+                <script src="app.js"></script>
+                 </td>
+                 <!--補償種目-->
+                <td><input type="text" id="hoshou34" name="hoshou34" maxlength="4"></td>
+                
+                <!--種目種類コード-->
+                <td>
+                    <input type="text" id="shumoku34" name="shumoku34" maxlength="2">
+                 <script src="app.js"></script>
+                 </td>
+                 
+                 <!--営業店コード-->
+                <td><input type="text" id="choeigyou2" name="choeigyou2" maxlength="4">
+                 <script src="app.js"></script>
+                 </td>
+                 <!--代理店コード-->
+                <td><input type="text" id="chodairi2" name="chodairi2" maxlength="4"></td>
+                <!--契約者コード-->
+                <td> 
+                    <input type="text" id="chokeiyakusha2" name="chokeiyakusha2" maxlength="5">
+                 <script src="app.js"></script>
+                </td>
+                <!--是正区分-->
+                <td> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
                             <select>
@@ -279,709 +215,84 @@
                         <input type="text">
                     </div>
                 </td>
-                <td rowspan="2"> 
+                <!--追加・返還保険料-->
+                <td> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select1" onchange="updateSelect('select1', 'select2')">
+                                <option value="plus">＋</option>
+                                <option value="minus">－</option>
                             </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select2" onchange="updateSelect('select2', 'select1')">
+                                <option value="minus">－</option>
+                                 <option value="plus">＋</option>
                             </select>
                         </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                         <input type="text" id="chototalResult"readonly>
                     </div>
                 </td>
                 
-            <tr>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-            </tr>
+                <!--基本保険料-->
             
-             <tr>
-                <td rowspan="2">5 6</td>
-                <td rowspan="2"><input type="text"></td>
-                <!-- 各列に入力フィールドを追加 -->
-                <!-- 必要に応じて同様の行を繰り返す -->
-                <td rowspan="2"><input type="text" onclick="validateInput()"></td>
-             
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td rowspan="2"><input type="text"></td>
-                <td rowspan="2"> 
+                <td> 
                 　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                         <input type="text" class="calculation-input" id="chokihon1" name="chokihon1" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
                 </td>
+                <!--地震上乗せ保険料-->
                 <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                 <div style="display: flex;">
+                        <input type="text" class="calculation-input"id="zisinuwa1" name="zisinuwa1" maxlength="11">
+                <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 
-            <tr>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-            </tr>
-            
-                 <tr>
-                <td rowspan="2">7 8</td>
-                <td rowspan="2"><input type="text"></td>
-                <!-- 各列に入力フィールドを追加 -->
-                <!-- 必要に応じて同様の行を繰り返す -->
-                <td rowspan="2"><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td rowspan="2"><input type="text"></td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                <!--地震保険料-->
+                <td> 
+                 <div style="display: flex;">
+                        <input type="text"class="calculation-input" id="zisin1" name="zisin1" maxlength="11">
+                <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 
-            <tr>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-            </tr>
-            
-                 <tr>
-                <td rowspan="2">9 10</td>
-                <td rowspan="2"><input type="text"></td>
-                <!-- 各列に入力フィールドを追加 -->
-                <!-- 必要に応じて同様の行を繰り返す -->
-                <td rowspan="2"><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td rowspan="2"><input type="text"></td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                <!-- 搬送応急・レンタ費用等補償保険料-->
+                <td> 
+                 <div style="display: flex;">
+                         <input type="text"class="calculation-input" id="chohansou1" name="chohansou1" maxlength="11">
+                <script src="hokenryou.js"></script>
                     </div>
                 </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                <!--ファミバイ保険料-->
+                <td> 
+                 <div style="display: flex;">
+                          <input type="text"class="calculation-input" id="chofami1" name="chofami1" maxlength="11">
+                <script src="hokenryou.js"></script>
                     </div>
                 </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                <!--DAP保険料-->
+                <td> 
+                 <div style="display: flex;">
+                        <input type="text"class="calculation-input" id="chodap1" name="chodap1" maxlength="11">
+                <script src="hokenryou.js"></script>
                     </div>
                 </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                <!--ホームサイバー・特定設備水災・水災初期費用保険料-->
+                <td>
+                     <div style="display: flex;">
+                          <input type="text"class="calculation-input" id="home1" name="home1" maxlength="11">
+                <script src="hokenryou.js"></script>
                     </div>
                 </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
-                    </div>
-                </td>
-                <td rowspan="2"> 
-                　 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
-                            </select>
-                        </div>
-                        <input type="text">
+                <!--故障損害補償保険料-->
+                <td> 
+                　  <div style="display: flex;">
+                       <input type="text"class="calculation-input" id="chokoshou1" name="chokoshou1" maxlength="11">
+                <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 
-            <tr>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-            </tr>
+           </tr>
         </tbody>    
     </table>
    <div class="btn-container">
