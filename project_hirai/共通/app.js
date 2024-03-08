@@ -75,6 +75,7 @@ function isAlphaNumeric(inputString) {
     return /^[a-zA-Z0-9]+$/.test(inputString);
 }
 
+/*-----------------------------自動車------------------------------------*/
 /*英数字と桁数のチェック*/
 /*桁数チェック関数*/
 document.addEventListener('DOMContentLoaded', function () {
@@ -134,6 +135,28 @@ document.getElementById('eigyou2').addEventListener('focus', function () {
     this.addEventListener('blur', handleBlur);
 });
 
+document.getElementById('eigyou3').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+document.getElementById('eigyou4').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+document.getElementById('eigyou5').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+document.getElementById('eigyou6').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
+
 document.getElementById('dairi1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
@@ -146,6 +169,30 @@ document.getElementById('dairi2').addEventListener('focus', function () {
     this.addEventListener('blur', handleBlur);
 });
 
+document.getElementById('dairi3').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
+document.getElementById('dairi4').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
+document.getElementById('dairi5').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
+document.getElementById('dairi6').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+});
+
 
 document.getElementById('keiyakusha1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
@@ -153,10 +200,163 @@ document.getElementById('keiyakusha1').addEventListener('focus', function () {
     this.addEventListener('blur', handleBlur);
 });
 
+/*-------------------------超保険-----------------------------------------*/
 
+    // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('choshokenbanngou12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    //this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+   // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('choshokenbanngou34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    //this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('choshokenbanngou56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    //this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('cchomeisai12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+   // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('chomeisai34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('chomeisai56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+     // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('hoshou12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+   // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('hoshou34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('hoshou56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('shumoku12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+   // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('shumoku34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    // カーソルが合わせられたときにチェックが実行されないように修正
+    document.getElementById('shumoku56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    
+   document.getElementById('choeigyou1').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
 
+    document.getElementById('choeigyou2').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    document.getElementById('choeigyou3').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    document.getElementById('choeigyou4').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    document.getElementById('choeigyou5').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+   
+   document.getElementById('choeigyou6').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    document.getElementById('chodairi1').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
 
+    document.getElementById('chodairi2').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    document.getElementById('chodairi3').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
 
+    document.getElementById('chodairi4').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    document.getElementById('chodairi5').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+
+    document.getElementById('chodairi6').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+/*------------------------------------------------------------------------*/
 
 function handleBlur() {
     validateInput(this.id, this.maxLength,);
