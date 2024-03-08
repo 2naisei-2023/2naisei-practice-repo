@@ -229,6 +229,24 @@ function isAlphaNumeric(inputString) {
     this.addEventListener('blur', handleBlur);
     });
     
+    document.getElementById('chokeiyakusha1').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    document.getElementById('chokeiyakusha2').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
+    document.getElementById('chokeiyakusha3').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', handleBlur);
+    this.addEventListener('blur', handleBlur);
+    });
+    
 /*------------------------------------------------------------------------*/
 
 function handleBlur() {
