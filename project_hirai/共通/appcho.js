@@ -17,38 +17,6 @@ function pageInputTransition(){
 }
 
 
- function validateSelection() {
-            // ラジオボタンの要素を取得
-            var radioButton1 = document.getElementById("car");
-            var radioButton2 = document.getElementById("cho");
-
-            // どちらのラジオボタンも選択されていない場合にアラートを表示
-            if (!radioButton1.checked && !radioButton2.checked) {
-                alert("種目を選択してください。");
-                return false; // 送信をキャンセル
-            }
-            return true; // 送信を許可
-        }
-
-        function validateKeyNumber() {
-            var keyNumber = document.getElementById("FirstName").value.trim();
-            // キー番号が未入力の場合にアラートを表示
-            if (keyNumber === "") {
-                alert("キー番号を入力してください。");
-                return false; // 送信をキャンセル
-            }
-            return true; // 送信を許可
-        }
-
-        function callTwoFunctions() {
-            // ラジオボタンの選択とキー番号の入力を確認
-            if (validateSelection() || validateKeyNumber()) {
-                // ページ遷移処理をここに追加（例: window.location.href = "次のページのURL";）
-                 validateSelection();
-            　　　pageInputTransition();
-            }
-        }
-
 
 /*完了画面へ遷移｀*/
 function pageEndTransition(){
