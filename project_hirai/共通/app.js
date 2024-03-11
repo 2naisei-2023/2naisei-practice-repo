@@ -229,4 +229,20 @@ function validateInput(inputId, expectedLength) {
     }
 }
 
+function clearRadioButtons() {
+        // 自動車と超保険のラジオボタンを取得
+        var carRadioButton = document.getElementById("car");
+        var choRadioButton = document.getElementById("cho");
+
+        // ラジオボタンの選択を解除
+        carRadioButton.checked = false;
+        choRadioButton.checked = false;
+    
+    var inputElement = document.getElementById("FirstName"); // inputElementId は実際の入力項目のIDに置き換えてください
+    if (inputElement) {
+        inputElement.value = "";
+    }
+    }
+    
+
 
