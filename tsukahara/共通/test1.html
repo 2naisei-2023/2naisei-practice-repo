@@ -21,11 +21,10 @@
         event.preventDefault(); // フォームのデフォルトの送信を防止
 
         // フォームの入力値を取得
-        const name = document.getElementById("name").value;
-        const age = parseInt(document.getElementById("age").value);
+        const FirstName = document.getElementById("FirstName").value;
 
         // 入力値をJSON形式に変換
-        const jsonData = JSON.stringify({ "name": name, "age": age });
+        const jsonData = JSON.stringify({ "FirstName": FirstName});
 
         // Lambda関数にデータを送信するためのAPI Gatewayのエンドポイント
         const apiUrl = 'https://yimkqk8xbb.execute-api.ap-northeast-1.amazonaws.com/test1_tsukahara/Lambda';
