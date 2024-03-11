@@ -246,3 +246,48 @@ function clearRadioButtons() {
     
 
 
+function updateInputStatus() {
+    // ラジオボタンと入力項目の要素を取得
+    var carRadioButton = document.getElementById("car");
+    var choRadioButton = document.getElementById("cho");
+    var inputElement = document.getElementById("FirstName"); // inputElementId は実際の入力項目のIDに置き換えてください
+
+    // ラジオボタンが選択されているか確認
+    var isCarSelected = carRadioButton.checked;
+    var isChoSelected = choRadioButton.checked;
+
+    // 入力項目が入力されているか確認
+    var isInputFilled = inputElement.value.trim() !== "";
+
+    // 選択された状態により非活性を設定
+    if (isCarSelected) {
+        inputElement.disabled = true;
+        choRadioButton.disabled = false;
+    } else if (isChoSelected) {
+        inputElement.disabled = true;
+        carRadioButton.disabled = false;
+    } else {
+        inputElement.disabled = false;
+        carRadioButton.disabled = true;
+        choRadioButton.disabled = true;
+    }
+}
+
+function clearSelectionAndInput() {
+    // ラジオボタンと入力項目の要素を取得
+    var carRadioButton = document.getElementById("car");
+    var choRadioButton = document.getElementById("cho");
+    var inputElement = document.getElementById("FirstName"); // inputElementId は実際の入力項目のIDに置き換えてください
+
+    // ラジオボタンの選択を解除
+    carRadioButton.checked = false;
+    choRadioButton.checked = false;
+
+    // 入力項目をクリア
+    inputElement.value = "";
+
+    // 非活性を解除
+    inputElement.disabled = false;
+    carRadioButton.disabled = false;
+    choRadioButton.disabled = false;
+}

@@ -19,11 +19,8 @@
     <label for="" class="form-label required">種目</label>
     <div class="radio-area input-control">
         <div style="text-align:left;" class="error"></div>
-        <input type="radio" id="car" name="sentaku" value="input" class="radio-input">
-        <label for="car" class="radio-label">自動車</label>
-
-        <input type="radio" id="cho" name="sentaku" value="choinput" class="radio-input">
-        <label for="cho" class="radio-label">超保険</label>
+       <label><input type="radio" id="car" name="vehicle" onchange="updateInputStatus()">自動車</label>
+        <label><input type="radio" id="cho" name="vehicle" onchange="updateInputStatus()">超保険</label>
     </div>
 
     
@@ -33,11 +30,11 @@
     <p>中断再開する特殊計上番号を入力し【中断再開】ボタンをクリックしてください。</p>
     <div class="input-control">
         <label for="FirstName" class="form-label required">キー番号</label>
-        <input type="text" id="FirstName" name="FirstName" value="" class="form-input">
+        <input type="text" id="FirstName" name="FirstName" value="" class="form-input" onchange="updateInputStatus()">
     </div>
     <!-- ボタンが押されたときに`transition.js`の`pageTransition()`関数を呼び出す -->
     <button onclick="callTwoFunctions();">入力開始</button>
     <!-- クリアボタン -->
-    <button onclick="clearRadioButtons()">選択解除</button>
+   <button onclick="clearSelectionAndInput()">クリア</button>
 </body>
 </html>
