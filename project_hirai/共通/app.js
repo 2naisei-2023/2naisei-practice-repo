@@ -18,39 +18,6 @@ function pageInputTransition(){
 }
 
 
- function validateSelection() {
-            // ラジオボタンの要素を取得
-            var radioButton1 = document.getElementById("car");
-            var radioButton2 = document.getElementById("cho");
-
-            // どちらのラジオボタンも選択されていない場合にアラートを表示
-            if (!radioButton1.checked && !radioButton2.checked) {
-                alert("種目を選択してください。");
-                return false; // 送信をキャンセル
-            }
-            return true; // 送信を許可
-        }
-
-        function validateKeyNumber() {
-            var keyNumber = document.getElementById("FirstName").value.trim();
-            // キー番号が未入力の場合にアラートを表示
-            if (keyNumber === "") {
-                alert("キー番号を入力してください。");
-                return false; // 送信をキャンセル
-            }
-            return true; // 送信を許可
-        }
-
-        function callTwoFunctions() {
-            // ラジオボタンの選択とキー番号の入力を確認
-            if (validateSelection() || validateKeyNumber()) {
-                // ページ遷移処理をここに追加（例: window.location.href = "次のページのURL";）
-                 validateSelection();
-            　　　pageInputTransition();
-            }
-        }
-
-
 /*完了画面へ遷移｀*/
 function pageEndTransition(){
     //遷移先のURL
@@ -258,6 +225,10 @@ function updateInputStatus() {
 
     // 入力項目が入力されているか確認
     var isInputFilled = inputElement.value.trim() !== "";
+    var inputValue = inputElement.value.trim();
+    
+
+
 
     // 選択された状態により非活性を設定
     if (isCarSelected) {
@@ -291,3 +262,29 @@ function clearSelectionAndInput() {
     carRadioButton.disabled = false;
     choRadioButton.disabled = false;
 }
+
+ function validateAndAlert() {
+            var carRadioButton = document.getElementById("car");
+            var choRadioButton = document.getElementById("cho");
+            var inputElement = document.getElementById("FirstName");
+
+            var isCarSelected = carRadioButton.checked;
+            var isChoSelected = choRadioButton.checked;
+            var isInputFilled = inputElement.value.trim() !== "";
+            
+            var inputValue = inputElement.value.trim();
+
+            if (!isCarSelected && !isChoSelected && !isInputFilled) {
+                alert("新規の場合はラジオボタン、中断再開の場合は中断キーを入力してください");
+            } else {
+              // ラジオボタンに応じて遷移先URLを設定
+        var targetUrl = isCarSelected ? 'input.html' : (isChoSelected ? 'choinput.html' : '');
+
+        // 遷移先URLが設定されている場合に遷移
+        if (targetUrl) {
+            window.location.href = targetUrl;
+        } else {
+            console.log("処理を実行");
+            }
+            }
+ }
