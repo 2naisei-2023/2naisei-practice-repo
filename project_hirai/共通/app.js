@@ -288,3 +288,56 @@ function clearSelectionAndInput() {
             }
             }
  }
+ 
+function validateForm() {
+    // 1行目の各要素を取得
+    var shokenbanngou1 = document.getElementById("shokenbanngou1");
+    var meisai12 = document.getElementById("meisai12");
+    var eigyou1 = document.getElementById("eigyou1");
+    var dairi1 = document.getElementById("dairi1");
+    var kihon1 = document.getElementById("kihon1");
+
+    // 必須項目が空であるかをチェック
+    if (shokenbanngou1.value.trim() === '' || meisai12.value.trim() === '' || eigyou1.value.trim() === '' || dairi1.value.trim() === '' || kihon1.value.trim() === '') {
+        highlightEmptyFields(shokenbanngou1, meisai12, eigyou1, dairi1, kihon1);
+        alert("必須項目が未入力です。");
+        return false; // フォームの送信を防止
+    }
+    return true; // フォーム送信を許可
+}
+
+// 未入力項目を赤くハイライトする関数
+function highlightEmptyFields(shokenbanngou1, meisai12, eigyou1, dairi1, kihon1) {
+    // 各要素の未入力チェックを行い、未入力の場合は赤くハイライト
+    if (shokenbanngou1.value.trim() === '') {
+        shokenbanngou1.classList.add('highlight');
+    } else {
+        shokenbanngou1.classList.remove('highlight');
+    }
+
+    if (meisai12.value.trim() === '') {
+        meisai12.classList.add('highlight');
+    } else {
+        meisai12.classList.remove('highlight');
+    }
+
+    if (eigyou1.value.trim() === '') {
+        eigyou1.classList.add('highlight');
+    } else {
+        eigyou1.classList.remove('highlight');
+    }
+
+    if (dairi1.value.trim() === '') {
+        dairi1.classList.add('highlight');
+    } else {
+        dairi1.classList.remove('highlight');
+    }
+
+    if (kihon1.value.trim() === '') {
+        kihon1.classList.add('highlight');
+    } else {
+        kihon1.classList.remove('highlight');
+    }
+}
+
+

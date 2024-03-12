@@ -116,7 +116,6 @@
             <!-- 基本保険料 -->
             <td>
                 <div style="display: flex;">
-                       
                         <input type="text" class="calculation-input" id="kihon1" name="kihon1" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
@@ -472,6 +471,8 @@
     <!-- ボタンが押されたときに`transition.js`の`pageTransition()`関数を呼び出す -->
     <button onclick="pageStartTransition()">開始画面へ</button>
     <button onclick="pageInterruptTransition()">中断保存</button>
-    <button onclick="pageEndTransition()">CSV出力</button>
+    <!-- ボタンが押されたときに`validateForm()`と`pageEndTransition()`の両方の関数を呼び出す -->
+    <button onclick="if(validateForm()) pageEndTransition()">CSV出力</button>
+
 </body>
 </html>

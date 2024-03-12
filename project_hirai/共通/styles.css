@@ -25,3 +25,7 @@ body {
         flex-basis: 100%; /* 画面が小さい場合はボタンをフル幅にする */
     }
 }
+
+.highlight {
+    border: 2px solid red;
+}

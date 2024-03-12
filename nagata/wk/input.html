@@ -25,7 +25,6 @@
                 <th>営業店コード</th>
                 <th>代理店コード</th>
                 <th>契約者（団体）コード</th>
-                <th>是正計上区分</th>
                 <th>追加・返還保険料（合計保険料）</th>
                 <th>基本保険料</th>
                 <th>弁護士自動車保険料</th>
@@ -50,7 +49,6 @@
                 <td><input type="text" id="inputText" name="inputText" oninput="checkInputLength4(this.value)"></td>
                 <td><input type="text" id="inputText" name="inputText" oninput="checkInputLength4(this.value)"></td>
                 <td><input type="text" id="inputText" name="inputText" oninput="checkInputLength5(this.value)"></td>
-                <td rowspan="2"><input type="text"></td>
                 <td rowspan="2"> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
@@ -63,7 +61,7 @@
                                 <option value="item2">－</option>
                             </select>
                         </div>
-                        <input type="text">
+                        <input type="text" id="inputText" name="inputText" oninput="isHalfWidthNumeric(this.value)">
                     </div>
                 </td>
                 <td rowspan="2"> 
@@ -232,7 +230,6 @@
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
-                <td rowspan="2"><input type="text"></td>
                 <td rowspan="2"> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
@@ -414,7 +411,6 @@
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
-                <td rowspan="2"><input type="text"></td>
                 <td rowspan="2"> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
@@ -596,7 +592,6 @@
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
-                <td rowspan="2"><input type="text"></td>
                 <td rowspan="2"> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
@@ -778,7 +773,6 @@
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
-                <td rowspan="2"><input type="text"></td>
                 <td rowspan="2"> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
