@@ -201,28 +201,29 @@
         </tr>
         
         <!-- 2行目 -->
-          <tr>
+        <tr>
             <td>3　4<name="renban"></td>
             
             <!-- 証券 -->
             <td>
+                
+                <input type="text" id="shokenbanngou3" name="shokenbanngou3" maxlength="10">
                 <script src="app.js"></script>
-                <input type="text" id="shokenbanngou34" name="shokenbanngou34" maxlength="10">
             </td>
             
             <!-- 明細 -->
             <td>
                 <script src="app.js"></script>
-                 <input type="text" id="meisai34" name="meisai34" maxlength="5">
+                <input type="text" id="meisai34" name="meisai34" maxlength="5">
             </td>
             
             <!-- 営業店 -->
             <td>
+                
                 <input type="text" id="eigyou3" name="eigyou3" maxlength="4">
                 <input type="text" id="eigyou4" name="eigyou4" maxlength="4">
                 <script src="app.js"></script>
             </td>
-            
             
             <!-- 代理店 -->
             <td>
@@ -232,56 +233,60 @@
             </td>
             
             <!-- 契約者 -->
-            <td><input type="text" name="keiyakusya_dantai_bango"></td>
-           
-           <!-- DAP保険料 -->
+            <td>
+                <input type="text" id="keiyakusha3" name="keiyakusha3" maxlength="5">
+                <script src="app.js"></script>
+            </td>
+            
+           <!-- 是正 -->
             <td><input type="text" name="seisei_keijou_kubun"></td>
            
            <!-- 追加保険料 -->
             <td>
                 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select3" onchange="updateSelect('select3', 'select4')">
+                                <option value="plus">＋</option>
+                                <option value="minus">－</option>
                             </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select4" onchange="updateSelect('select4', 'select3')">
+                                <option value="minus">－</option>
+                                 <option value="plus">＋</option>
                             </select>
                         </div>
-                        <input type="text">
+                         <input type="text" id="totalResult"readonly>
                     </div>
-            </td>
             </td>
            
             <!-- 基本保険料 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input" id="kihon3" name="kihon3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
-            </td>
             </td>
             
             <!-- 弁護士自動車 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="bengo3" name="bengo3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
-            </td>
             </td>
             
             <!-- 搬送 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="hansou3" name="hansou3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
             <!-- ふぁみばい -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="fami3" name="fami3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
@@ -289,7 +294,8 @@
             <!-- 個賠 -->
             <td>
                  <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="kobai3" name="kobai3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
            
@@ -297,14 +303,17 @@
            <!-- DAP保険料 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                       
+                       <input type="text" class="calculation-input"id="dap3" name="dap3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
            
            <!-- 法人DA -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="houzin3" name="houzin3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
@@ -312,44 +321,49 @@
              <!-- 弁護士 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                       <input type="text" class="calculation-input"id="bengosi3" name="bengosi3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
              <!-- PHYD保険料 -->
              <td>
                 <div style="display: flex;">
-                        <input type="text">
+                       <input type="text" class="calculation-input"id="phyd3" name="phyd3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
             <!-- 故障損害補償保険料　-->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="koshousongai3" name="koshousongai3" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
         </tr>
         
         <!-- 3行目 -->
-          <tr>
+        <tr>
             <td>5　6<name="renban"></td>
             
             <!-- 証券 -->
             <td>
+                
+                <input type="text" id="shokenbanngou5" name="shokenbanngou5" maxlength="10">
                 <script src="app.js"></script>
-                <input type="text" id="shokenbanngou56" name="shokenbanngou56" maxlength="10">
             </td>
             
             <!-- 明細 -->
             <td>
+                <script src="app.js"></script>
                 <input type="text" id="meisai56" name="meisai56" maxlength="5">
-                 <script src="app.js"></script>
             </td>
             
             <!-- 営業店 -->
             <td>
-                 <input type="text" id="eigyou5" name="eigyou5" maxlength="4">
+                
+                <input type="text" id="eigyou5" name="eigyou5" maxlength="4">
                 <input type="text" id="eigyou6" name="eigyou6" maxlength="4">
                 <script src="app.js"></script>
             </td>
@@ -362,56 +376,60 @@
             </td>
             
             <!-- 契約者 -->
-            <td><input type="text" name="keiyakusya_dantai_bango"></td>
-           
-           <!-- DAP保険料 -->
+            <td>
+                <input type="text" id="keiyakusha5" name="keiyakusha5" maxlength="5">
+                <script src="app.js"></script>
+            </td>
+            
+           <!-- 是正 -->
             <td><input type="text" name="seisei_keijou_kubun"></td>
            
            <!-- 追加保険料 -->
             <td>
                 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select5" onchange="updateSelect('select5', 'select6')">
+                                <option value="plus">＋</option>
+                                <option value="minus">－</option>
                             </select>
-                            <select>
-                                <option value="item1">＋</option>
-                                <option value="item2">－</option>
+                            <select id="select6" onchange="updateSelect('select6', 'select5')">
+                                <option value="minus">－</option>
+                                 <option value="plus">＋</option>
                             </select>
                         </div>
-                        <input type="text">
+                         <input type="text" id="totalResult"readonly>
                     </div>
-            </td>
             </td>
            
             <!-- 基本保険料 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input" id="kihon5" name="kihon5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
-            </td>
             </td>
             
             <!-- 弁護士自動車 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="bengo5" name="bengo5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
-            </td>
             </td>
             
             <!-- 搬送 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="hansou5" name="hansou5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
             <!-- ふぁみばい -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="fami5" name="fami5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
@@ -419,7 +437,8 @@
             <!-- 個賠 -->
             <td>
                  <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="kobai5" name="kobai5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
            
@@ -427,14 +446,17 @@
            <!-- DAP保険料 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                       
+                       <input type="text" class="calculation-input"id="dap5" name="dap5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
            
            <!-- 法人DA -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="houzin5" name="houzin5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
@@ -442,30 +464,30 @@
              <!-- 弁護士 -->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                       <input type="text" class="calculation-input"id="bengosi5" name="bengosi5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
              <!-- PHYD保険料 -->
              <td>
                 <div style="display: flex;">
-                        <input type="text">
+                       <input type="text" class="calculation-input"id="phyd5" name="phyd5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
             
             <!-- 故障損害補償保険料　-->
             <td>
                 <div style="display: flex;">
-                        <input type="text">
+                        <input type="text" class="calculation-input"id="koshousongai5" name="koshousongai5" maxlength="11">
+                        <script src="hokenryou.js"></script>
                     </div>
             </td>
         </tr>
         
     </tbody>
 </table>
-        
-        
-        
         
     </table>
     <!-- ボタンが押されたときに`transition.js`の`pageTransition()`関数を呼び出す -->

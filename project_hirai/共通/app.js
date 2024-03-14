@@ -289,55 +289,54 @@ function clearSelectionAndInput() {
             }
  }
  
-function validateForm() {
-    // 1行目の各要素を取得
-    var shokenbanngou1 = document.getElementById("shokenbanngou1");
-    var meisai12 = document.getElementById("meisai12");
-    var eigyou1 = document.getElementById("eigyou1");
-    var dairi1 = document.getElementById("dairi1");
-    var kihon1 = document.getElementById("kihon1");
+   function validateRow(rowId) {
+            var requiredFields = ["shokenbanngou" + rowId, "meisai" + rowId, "eigyou" + rowId + "_1", "eigyou" + rowId + "_2", "dairi" + rowId + "_1", "dairi" + rowId + "_2", "keiyakusha" + rowId];
+            var hasInput = false;
 
-    // 必須項目が空であるかをチェック
-    if (shokenbanngou1.value.trim() === '' || meisai12.value.trim() === '' || eigyou1.value.trim() === '' || dairi1.value.trim() === '' || kihon1.value.trim() === '') {
-        highlightEmptyFields(shokenbanngou1, meisai12, eigyou1, dairi1, kihon1);
-        alert("必須項目が未入力です。");
-        return false; // フォームの送信を防止
-    }
-    return true; // フォーム送信を許可
-}
+            // 各行の入力があるかどうかをチェック
+            for (var i = 0; i < requiredFields.length; i++) {
+                var field = document.getElementById(requiredFields[i]);
+                if (field.value.trim() !== "") {
+                    hasInput = true;
+                    break;
+                }
+            }
 
-// 未入力項目を赤くハイライトする関数
-function highlightEmptyFields(shokenbanngou1, meisai12, eigyou1, dairi1, kihon1) {
-    // 各要素の未入力チェックを行い、未入力の場合は赤くハイライト
-    if (shokenbanngou1.value.trim() === '') {
-        shokenbanngou1.classList.add('highlight');
-    } else {
-        shokenbanngou1.classList.remove('highlight');
-    }
+            // 入力がある場合に他の必須項目のチェックを行う
+            if (hasInput) {
+                var isValid = true;
 
-    if (meisai12.value.trim() === '') {
-        meisai12.classList.add('highlight');
-    } else {
-        meisai12.classList.remove('highlight');
-    }
+                for (var i = 0; i < requiredFields.length; i++) {
+                    var field = document.getElementById(requiredFields[i]);
 
-    if (eigyou1.value.trim() === '') {
-        eigyou1.classList.add('highlight');
-    } else {
-        eigyou1.classList.remove('highlight');
-    }
+                    if (field.value.trim() === "") {
+                        // エラー時に赤色の枠を追加
+                        field.classList.add("error");
+                        isValid = false;
+                    } else {
+                        // エラー解消時に赤色の枠を削除
+                        field.classList.remove("error");
+                    }
+                }
 
-    if (dairi1.value.trim() === '') {
-        dairi1.classList.add('highlight');
-    } else {
-        dairi1.classList.remove('highlight');
-    }
+                return isValid;
+            }
 
-    if (kihon1.value.trim() === '') {
-        kihon1.classList.add('highlight');
-    } else {
-        kihon1.classList.remove('highlight');
-    }
-}
+            // 入力がない場合は常に true を返す
+            return true;
+        }
+
+        function validateForm() {
+            var isValid = true;
+            var numRows = 3;
+
+            for (var row = 1; row <= numRows; row++) {
+                if (!validateRow(row)) {
+                    isValid = false;
+                }
+            }
+
+            return isValid;
+        }
 
 
