@@ -6,6 +6,12 @@ document.getElementById('kihon1').addEventListener('focus', function () {
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
+document.getElementById('kihon3').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
 
 document.getElementById('bengo1').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
@@ -68,10 +74,10 @@ function updateSelect(changedSelectId, targetSelectId) {
 //
 
 function hokenryouHandleBlur() {
-    validateInput1(this.id, this.value);
+    validateInput(this.id, this.value);
 }
 
-function validateInput1(inputId, inputValue) {
+function validateInput(inputId, inputValue) {
     // 正規表現で数字のみを検証
     var isNumeric = /^[0-9]+$/.test(inputValue);
 
@@ -114,8 +120,8 @@ function validateInput1(inputId, inputValue) {
         
         // イベントリスナーを追加
         var calculationInputs1 = document.getElementsByClassName('calculation-input1');
-        for (var i = 0; i < calculationInputs.length; i++) {
-            calculationInputs[i].addEventListener('input', calculateTotal1);
+        for (var i = 0; i < calculationInputs1.length; i++) {
+            calculationInputs1[i].addEventListener('input', calculateTotal1);
         }
 
         // 合計を計算する関数
@@ -123,14 +129,39 @@ function validateInput1(inputId, inputValue) {
             var total = 0;
 
             for (var i = 0; i < calculationInputs1.length; i++) {
-                var inputValue1 = calculationInputs1[i].value.trim();
+                var inputValue = calculationInputs1[i].value.trim();
 
                 // 空白でない場合、数値に変換して合計に加算
-                if (inputValue1 !== "") {
-                    total += parseFloat(inputValue1);
+                if (inputValue !== "") {
+                    total += parseFloat(inputValue);
                 }
             }
 
             // 結果を表示するフィールドにセット
             document.getElementById('totalResult1').value = total;
         }
+        
+         // イベントリスナーを追加
+        var calculationInputs2 = document.getElementsByClassName('calculation-input2');
+        for (var i = 0; i < calculationInputs2.length; i++) {
+            calculationInputs2[i].addEventListener('input', calculateTotal2);
+        }
+
+        // 合計を計算する関数
+        function calculateTotal2() {
+            var total = 0;
+
+            for (var i = 0; i < calculationInputs2.length; i++) {
+                var inputValue = calculationInputs2[i].value.trim();
+
+                // 空白でない場合、数値に変換して合計に加算
+                if (inputValue !== "") {
+                    total += parseFloat(inputValue);
+                }
+            }
+
+            // 結果を表示するフィールドにセット
+            document.getElementById('totalResult2').value = total;
+        }
+        
+      
