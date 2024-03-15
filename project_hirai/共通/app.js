@@ -47,7 +47,7 @@ function isAlphaNumeric(inputString) {
 /*桁数チェック関数*/
 document.addEventListener('DOMContentLoaded', function () {
     // カーソルが合わせられたときにチェックが実行されないように修正
-    document.getElementById('shokenbanngou1').addEventListener('focus', function () {
+    document.getElementById('shouken12').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     //this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
@@ -55,13 +55,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // カーソルが合わせられたときにチェックが実行されないように修正
-document.getElementById('shokenbanngou34').addEventListener('focus', function () {
+document.getElementById('shouken34').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     //this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 // カーソルが合わせられたときにチェックが実行されないように修正
-document.getElementById('shokenbanngou56').addEventListener('focus', function () {
+document.getElementById('shouken56').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     //this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
@@ -161,7 +161,7 @@ document.getElementById('dairi6').addEventListener('focus', function () {
 });
 
 
-document.getElementById('keiyakusha1').addEventListener('focus', function () {
+document.getElementById('keiyaku12').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
