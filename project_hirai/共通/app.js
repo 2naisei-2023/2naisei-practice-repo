@@ -42,22 +42,23 @@ function isAlphaNumeric(inputString) {
     return /^[a-zA-Z0-9]+$/.test(inputString);
 }
 
+ 
 /*-----------------------------自動車------------------------------------*/
 /*英数字と桁数のチェック*/
 /*桁数チェック関数*/
-document.addEventListener('DOMContentLoaded', function () {
+
     // カーソルが合わせられたときにチェックが実行されないように修正
     document.getElementById('shouken12').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    //this.removeEventListener('blur', handleBlur);
+    this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
     });
-});
+
 
 // カーソルが合わせられたときにチェックが実行されないように修正
 document.getElementById('shouken34').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    //this.removeEventListener('blur', handleBlur);
+    this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 // カーソルが合わせられたときにチェックが実行されないように修正
@@ -86,8 +87,6 @@ document.getElementById('meisai56').addEventListener('focus', function () {
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
-
-
 
 
 document.getElementById('eigyou1').addEventListener('focus', function () {

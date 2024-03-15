@@ -129,7 +129,6 @@ document.getElementById('bengo56').addEventListener('focus', function () {
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
-
 document.getElementById('phyd12').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
@@ -160,6 +159,8 @@ document.getElementById('koshou56').addEventListener('focus', function () {
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
 });
+
+
 
 function updateSelect(changedSelectId, targetSelectId) {
   // 変更されたセレクトボックスの値を取得

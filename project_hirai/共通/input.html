@@ -13,8 +13,8 @@
     <hr> <!-- ここで線を追加 -->
     <p>キー番号：変数(未採番の場合は「未採番」) &nbsp;&nbsp;&nbsp;&nbsp;
     作成日：<span id="creationDate"></span></p>
-     <script>
-        // 現在の日付を取得
+    <script>
+         // 現在の日付を取得
         var today = new Date();
 
         // 年、月、日を取得
@@ -26,7 +26,7 @@
         var creationDateElement = document.getElementById('creationDate');
         creationDateElement.textContent = year + '/' + month + '/' + day;
     </script>
-    
+     
     <h2>入力内容</h2>
     <hr> <!-- ここで線を追加 -->
     
@@ -56,7 +56,7 @@
          <tbody>
         <!-- １行目 -->
         <tr>
-            <td>1　2<name="renban"></td>
+            <td>1　2 <name="renban"></td>
             
             <!-- 証券 -->
             <td>
@@ -73,10 +73,10 @@
             
             <!-- 営業店 -->
             <td>
-                
+                <script src="app.js"></script>
                 <input type="text" id="eigyou1" name="eigyou1" maxlength="4">
                 <input type="text" id="eigyou2" name="eigyou2" maxlength="4">
-                <script src="app.js"></script>
+               
             </td>
             
             <!-- 代理店 -->
@@ -93,7 +93,18 @@
             </td>
             
            <!-- 是正 -->
-            <td><input type="text" id="zesei12" name="zesei12"></td>
+            <td>
+                 <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <select id="zesei12">
+                                <option value="item0"> </option>
+                                <option value="item1">保険料返還案件</option>
+                                <option value="item2">保険料追加並びに増減なし案件</option>
+                            </select>
+                           
+                        
+                    </div>
+            </td>
            
            <!-- 追加保険料 -->
             <td>
@@ -239,7 +250,18 @@
             </td>
             
            <!-- 是正 -->
-            <td><input type="text" id="zesei34" name="zesei34"></td>
+            <td>
+                  <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <select id="zesei34">
+                                <option value="item0"> </option>
+                                <option value="item1">保険料返還案件</option>
+                                <option value="item2">保険料追加並びに増減なし案件</option>
+                            </select>
+                           
+                        
+                    </div>
+            </td>
            
            <!-- 追加保険料 -->
             <td>
@@ -382,7 +404,18 @@
             </td>
             
            <!-- 是正 -->
-            <td><input type="text"id="zesei56" name="zesei56"></td>
+            <td>
+                  <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <select id="zesei56">
+                                <option value="item0"> </option>
+                                <option value="item1">保険料返還案件</option>
+                                <option value="item2">保険料追加並びに増減なし案件</option>
+                            </select>
+                           
+                        
+                    </div>
+            </td>
            
            <!-- 追加保険料 -->
             <td>
