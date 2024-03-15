@@ -56,45 +56,55 @@
                 <td>1 2<name="renban"></name></td>
                   <!--証券番号-->
                 <td>
-                    <input type="text" id="choshokenbanngou12" name="choshokenbanngou12" maxlength="10">
-                <script src="appcho.js"></script>
+                    <script src="appcho.js"></script>
+                    <input type="text" id="cho_shouken12" name="cho_shouken12" maxlength="10">
+                
                 </td>
                <!-- 明細 -->
                 <td> 
-                    <input type="text" id="chomeisai12" name="chomeisai12" maxlength="5">
-                <script src="appcho.js"></script>
+                    <script src="appcho.js"></script>
+                    <input type="text" id="cho_meisai12" name="cho_meisai12" maxlength="5">
+                
                  </td>
                  <!--補償種目-->
-                <td><input type="text" id="hoshou12" name="hoshou12" maxlength="4"></td>
+                <td>
+                    <script src="appcho.js"></script>
+                    <input type="text" id="cho_hoshou12" name="cho_hoshou12" maxlength="4">
+                
+                </td>
                 
                 <!--種目種類コード-->
                 <td>
-                    <input type="text" id="shumoku12" name="shumoku12" maxlength="2">
-                 <script src="appcho.js"></script>
+                    <script src="appcho.js"></script>
+                    <input type="text" id="cho_shumoku12" name="cho_shumoku12" maxlength="2">
+                 
                  </td>
                  
                  <!--営業店コード-->
                 <td>
-                    <input type="text" id="choeigyou1" name="choeigyou1" maxlength="4">
-                    <input type="text" id="choeigyou2" name="choeigyou2" maxlength="4">
-                 <script src="appcho.js"></script>
+                    <script src="appcho.js"></script>
+                    <input type="text" id="cho_eigyou1" name="cho_eigyou1" maxlength="4">
+                    <input type="text" id="cho_eigyou2" name="cho_eigyou2" maxlength="4">
+                 
                  </td>
                  <!--代理店コード-->
                 <td>
-                    <input type="text" id="chodairi1" name="chodairi1" maxlength="4">
-                    <input type="text" id="chodairi2" name="chodairi2" maxlength="4">
                     <script src="appcho.js"></script>
+                    <input type="text" id="cho_dairi1" name="cho_dairi1" maxlength="4">
+                    <input type="text" id="cho_dairi2" name="cho_dairi2" maxlength="4">
+                    
                     </td>
                 <!--契約者コード-->
                 <td> 
-                    <input type="text" id="chokeiyakusha1" name="chokeiyakusha1" maxlength="5">
-                 <script src="appcho.js"></script>
+                    <script src="appcho.js"></script>
+                    <input type="text" id="cho_keiyaku12" name="cho_keiyaku12" maxlength="5">
+                 
                 </td>
                 <!--是正区分-->
                 <td> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
-                            <select>
+                            <select id="cho_zesei12">
                                 <option value="item0"> </option>
                                 <option value="item1">保険料返還案件</option>
                                 <option value="item2">保険料追加並びに増減なし案件</option>
@@ -116,20 +126,20 @@
                                  <option value="plus">＋</option>
                             </select>
                         </div>
-                         <input type="text" id="chototalResult"readonly>
+                         <input type="text" id="cho_total12"readonly>
                     </div>
                 </td>
                 <!--基本保険料-->
                 <td> 
                 　 <div style="display: flex;">
-                         <input type="text" class="calculation-input" id="chokihon1" name="chokihon1" maxlength="11">
+                         <input type="text" class="calculation-input" id="cho_kihon1" name="cho_kihon1" maxlength="11">
                         <script src="chohokenryou.js"></script>
                     </div>
                 </td>
                 <!--地震上乗せ保険料-->
                 <td> 
                  <div style="display: flex;">
-                        <input type="text" class="calculation-input"id="zisinuwa1" name="zisinuwa1" maxlength="11">
+                        <input type="text" class="calculation-input"id="cho_zishinup12" name="cho_zishinup12" maxlength="11">
                 <script src="chohokenryou.js"></script>
                     </div>
                 </td>
@@ -137,7 +147,7 @@
                 <!--地震保険料-->
                 <td> 
                  <div style="display: flex;">
-                        <input type="text"class="calculation-input" id="zisin1" name="zisin1" maxlength="11">
+                        <input type="text"class="calculation-input" id="cho_zishhin12" name="ho_zishin12" maxlength="11">
                 <script src="chohokenryou.js"></script>
                     </div>
                 </td>
@@ -145,35 +155,35 @@
                 <!-- 搬送応急・レンタ費用等補償保険料-->
                 <td> 
                  <div style="display: flex;">
-                         <input type="text"class="calculation-input" id="chohansou1" name="chohansou1" maxlength="11">
+                         <input type="text"class="calculation-input" id="cho_hansou12" name="cho_hansou12" maxlength="11">
                 <script src="chohokenryou.js"></script>
                     </div>
                 </td>
                 <!--ファミバイ保険料-->
                 <td> 
                  <div style="display: flex;">
-                          <input type="text"class="calculation-input" id="chofami1" name="chofami1" maxlength="11">
+                          <input type="text"class="calculation-input" id="cho_fami12" name="cho_fami12" maxlength="11">
                 <script src="chohokenryou.js"></script>
                     </div>
                 </td>
                 <!--DAP保険料-->
                 <td> 
                  <div style="display: flex;">
-                        <input type="text"class="calculation-input" id="chodap1" name="chodap1" maxlength="11">
+                        <input type="text"class="calculation-input" id="cho_dap12" name="cho_dap12" maxlength="11">
                 <script src="chohokenryou.js"></script>
                     </div>
                 </td>
                 <!--ホームサイバー・特定設備水災・水災初期費用保険料-->
                 <td>
                      <div style="display: flex;">
-                          <input type="text"class="calculation-input" id="home1" name="home1" maxlength="11">
+                          <input type="text"class="calculation-input" id="cho_home12" name="cho_home12" maxlength="11">
                 <script src="chohokenryou.js"></script>
                     </div>
                 </td>
                 <!--故障損害補償保険料-->
                 <td> 
                 　  <div style="display: flex;">
-                       <input type="text"class="calculation-input" id="chokoshou1" name="chokoshou1" maxlength="11">
+                       <input type="text"class="calculation-input" id="cho_koshou12" name="cho_koshou12" maxlength="11">
                 <script src="chohokenryou.js"></script>
                     </div>
                 </td>
@@ -185,45 +195,45 @@
                 <td>3 4<name="renban"></name></td>
                   <!--証券番号-->
                 <td>
-                    <input type="text" id="choshokenbanngou34" name="choshokenbanngou34" maxlength="10">
+                    <input type="text" id="cho_shouken34" name="cho_shouken34" maxlength="10">
                 <script src="appcho.js"></script>
                 </td>
                <!-- 明細 -->
                 <td> 
-                    <input type="text" id="chomeisai34" name="chomeisai34" maxlength="5">
+                    <input type="text" id="cho_meisai34" name="cho_meisai34" maxlength="5">
                 <script src="appcho.js"></script>
                  </td>
                  <!--補償種目-->
-                <td><input type="text" id="hoshou34" name="hoshou34" maxlength="4"></td>
+                <td><input type="text" id="cho_hoshou34" name="cho_hoshou34" maxlength="4"></td>
                 
                 <!--種目種類コード-->
                 <td>
-                    <input type="text" id="shumoku34" name="shumoku34" maxlength="2">
+                    <input type="text" id="cho_shumoku34" name="cho_shumoku34" maxlength="2">
                  <script src="appcho.js"></script>
                  </td>
                  
                  <!--営業店コード-->
                 <td>
-                    <input type="text" id="choeigyou3" name="choeigyou3" maxlength="4">
-                    <input type="text" id="choeigyou4" name="choeigyou4" maxlength="4">
+                    <input type="text" id="cho_eigyou3" name="cho_eigyou3" maxlength="4">
+                    <input type="text" id="cho_eigyou4" name="cho_eigyou4" maxlength="4">
                  <script src="appcho.js"></script>
                  </td>
                  <!--代理店コード-->
                 <td>
-                    <input type="text" id="chodairi3" name="chodairi3" maxlength="4">
-                    <input type="text" id="chodairi4" name="chodairi4" maxlength="4">
+                    <input type="text" id="cho_dairi3" name="cho_dairi3" maxlength="4">
+                    <input type="text" id="cho_dairi4" name="cho_dairi4" maxlength="4">
                     <script src="appcho.js"></script>
                     </td>
                 <!--契約者コード-->
                 <td> 
-                    <input type="text" id="chokeiyakusha2" name="chokeiyakusha2" maxlength="5">
+                    <input type="text" id="cho_keiyaku34" name="cho_keiyaku34" maxlength="5">
                  <script src="appcho.js"></script>
                 </td>
                 <!--是正区分-->
                 <td> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
-                            <select>
+                            <select id="cho_zesei34">
                                 <option value="item0"> </option>
                                 <option value="item1">保険料返還案件</option>
                                 <option value="item2">保険料追加並びに増減なし案件</option>
@@ -245,7 +255,7 @@
                                  <option value="plus">＋</option>
                             </select>
                         </div>
-                         <input type="text" id="chototalResult2"readonly>
+                         <input type="text" id="cho_total34"readonly>
                     </div>
                 </td>
                 
@@ -253,14 +263,14 @@
             
                 <td> 
                 　 <div style="display: flex;">
-                         <input type="text" class="calculation-input" id="chokihon2" name="chokihon2" maxlength="11">
+                         <input type="text" class="calculation-input" id="cho_kihon34" name="cho_kihon34" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--地震上乗せ保険料-->
                 <td> 
                  <div style="display: flex;">
-                        <input type="text" class="calculation-input"id="zisinuwa2" name="zisinuwa2" maxlength="11">
+                        <input type="text" class="calculation-input"id="cho_zishinup34" name="cho_zishinup34" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
@@ -268,7 +278,7 @@
                 <!--地震保険料-->
                 <td> 
                  <div style="display: flex;">
-                        <input type="text"class="calculation-input" id="zisin2" name="zisin2" maxlength="11">
+                        <input type="text"class="calculation-input" id="cho_zishin34" name="cho_zishin34" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
@@ -276,35 +286,35 @@
                 <!-- 搬送応急・レンタ費用等補償保険料-->
                 <td> 
                  <div style="display: flex;">
-                         <input type="text"class="calculation-input" id="chohansou2" name="chohansou2" maxlength="11">
+                         <input type="text"class="calculation-input" id="cho_hansou34" name="cho_hansou34" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--ファミバイ保険料-->
                 <td> 
                  <div style="display: flex;">
-                          <input type="text"class="calculation-input" id="chofami2" name="chofami2" maxlength="11">
+                          <input type="text"class="calculation-input" id="cho_fami34" name="cho_fami34" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--DAP保険料-->
                 <td> 
                  <div style="display: flex;">
-                        <input type="text"class="calculation-input" id="chodap2" name="chodap2" maxlength="11">
+                        <input type="text"class="calculation-input" id="cho_dap34" name="cho_dap34" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--ホームサイバー・特定設備水災・水災初期費用保険料-->
                 <td>
                      <div style="display: flex;">
-                          <input type="text"class="calculation-input" id="home2" name="home2" maxlength="11">
+                          <input type="text"class="calculation-input" id="cho_home34" name="cho_home34" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--故障損害補償保険料-->
                 <td> 
                 　  <div style="display: flex;">
-                       <input type="text"class="calculation-input" id="chokoshou2" name="chokoshou2" maxlength="11">
+                       <input type="text"class="calculation-input" id="cho_koshou34" name="cho_koshou34" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
@@ -315,45 +325,45 @@
                 <td>5 6<name="renban"></name></td>
                   <!--証券番号-->
                 <td>
-                    <input type="text" id="choshokenbanngou56" name="choshokenbanngou56" maxlength="10">
+                    <input type="text" id="cho_shouken56" name="cho_shouken56" maxlength="10">
                 <script src="appcho.js"></script>
                 </td>
                <!-- 明細 -->
                 <td> 
-                    <input type="text" id="chomeisai56" name="chomeisai56" maxlength="5">
+                    <input type="text" id="cho_meisai56" name="cho_meisai56" maxlength="5">
                 <script src="appcho.js"></script>
                  </td>
                  <!--補償種目-->
-                <td><input type="text" id="hoshou56" name="hoshou56" maxlength="4"></td>
+                <td><input type="text" id="cho_hoshou56" name="cho_hoshou56" maxlength="4"></td>
                 
                 <!--種目種類コード-->
                 <td>
-                    <input type="text" id="shumoku56" name="shumoku56" maxlength="2">
+                    <input type="text" id="cho_shumoku56" name="cho_shumoku56" maxlength="2">
                  <script src="appcho.js"></script>
                  </td>
                  
                  <!--営業店コード-->
                 <td>
-                   <input type="text" id="choeigyou5" name="choeigyou5" maxlength="4">
-                    <input type="text" id="choeigyou6" name="choeigyou6" maxlength="4">
+                   <input type="text" id="cho_eigyou5" name="cho_eigyou5" maxlength="4">
+                    <input type="text" id="cho_eigyou6" name="cho_eigyou6" maxlength="4">
                  <script src="appcho.js"></script>
                  </td>
                  <!--代理店コード-->
                 <td>
-                    <input type="text" id="chodairi5" name="chodairi5" maxlength="4">
-                    <input type="text" id="chodairi6" name="chodairi6" maxlength="4">
+                    <input type="text" id="cho_dairi5" name="cho_dairi5" maxlength="4">
+                    <input type="text" id="cho_dairi6" name="cho_dairi6" maxlength="4">
                     <script src="appcho.js"></script>
                     </td>
                 <!--契約者コード-->
                 <td> 
-                    <input type="text" id="chokeiyakusha3" name="chokeiyakusha3" maxlength="5">
+                    <input type="text" id="cho_keiyaku56" name="cho_keiyaku56" maxlength="5">
                  <script src="appcho.js"></script>
                 </td>
                 <!--是正区分-->
                 <td> 
                 　 <div style="display: flex;">
                         <div style="display: flex; flex-direction: column;">
-                            <select>
+                            <select id="zesei56">
                                 <option value="item0"> </option>
                                 <option value="item1">保険料返還案件</option>
                                 <option value="item2">保険料追加並びに増減なし案件</option>
@@ -375,7 +385,7 @@
                                  <option value="plus">＋</option>
                             </select>
                         </div>
-                         <input type="text" id="chototalResult3"readonly>
+                         <input type="text" id="cho_total56"readonly>
                     </div>
                 </td>
                 
@@ -383,14 +393,14 @@
             
                 <td> 
                 　 <div style="display: flex;">
-                         <input type="text" class="calculation-input" id="chokihon3" name="chokihon3" maxlength="11">
+                         <input type="text" class="calculation-input" id="cho_kihon56" name="cho_kihon56" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--地震上乗せ保険料-->
                 <td> 
                  <div style="display: flex;">
-                        <input type="text" class="calculation-input"id="zisinuwa3" name="zisinuwa3" maxlength="11">
+                        <input type="text" class="calculation-input"id="cho_zishinup56" name="cho_zishinup56" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
@@ -398,7 +408,7 @@
                 <!--地震保険料-->
                 <td> 
                  <div style="display: flex;">
-                        <input type="text"class="calculation-input" id="zisin3" name="zisin3" maxlength="11">
+                        <input type="text"class="calculation-input" id="cho_zishin56" name="cho_zishin56" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
@@ -406,35 +416,35 @@
                 <!-- 搬送応急・レンタ費用等補償保険料-->
                 <td> 
                  <div style="display: flex;">
-                         <input type="text"class="calculation-input" id="chohansou3" name="chohansou3" maxlength="11">
+                         <input type="text"class="calculation-input" id="cho_hansou56" name="cho_hansou56" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--ファミバイ保険料-->
                 <td> 
                  <div style="display: flex;">
-                          <input type="text"class="calculation-input" id="chofami3" name="chofami3" maxlength="11">
+                          <input type="text"class="calculation-input" id="cho_fami56" name="cho_fami56" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--DAP保険料-->
                 <td> 
                  <div style="display: flex;">
-                        <input type="text"class="calculation-input" id="chodap3" name="chodap3" maxlength="11">
+                        <input type="text"class="calculation-input" id="cho_dap56" name="cho_dap56" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--ホームサイバー・特定設備水災・水災初期費用保険料-->
                 <td>
                      <div style="display: flex;">
-                          <input type="text"class="calculation-input" id="home3" name="home3" maxlength="11">
+                          <input type="text"class="calculation-input" id="cho_home56" name="cho_home56" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
                 <!--故障損害補償保険料-->
                 <td> 
                 　  <div style="display: flex;">
-                       <input type="text"class="calculation-input" id="chokoshou3" name="chokoshou3" maxlength="11">
+                       <input type="text"class="calculation-input" id="cho_koshou56" name="cho_koshou56" maxlength="11">
                 <script src="hokenryou.js"></script>
                     </div>
                 </td>
