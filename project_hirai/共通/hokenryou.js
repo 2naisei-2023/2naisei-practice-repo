@@ -111,3 +111,26 @@ function validateInput1(inputId, inputValue) {
             // 結果を表示するフィールドにセット
             document.getElementById('totalResult').value = total;
         }
+        
+        // イベントリスナーを追加
+        var calculationInputs1 = document.getElementsByClassName('calculation-input1');
+        for (var i = 0; i < calculationInputs.length; i++) {
+            calculationInputs[i].addEventListener('input', calculateTotal1);
+        }
+
+        // 合計を計算する関数
+        function calculateTotal1() {
+            var total = 0;
+
+            for (var i = 0; i < calculationInputs1.length; i++) {
+                var inputValue1 = calculationInputs1[i].value.trim();
+
+                // 空白でない場合、数値に変換して合計に加算
+                if (inputValue1 !== "") {
+                    total += parseFloat(inputValue1);
+                }
+            }
+
+            // 結果を表示するフィールドにセット
+            document.getElementById('totalResult1').value = total;
+        }
