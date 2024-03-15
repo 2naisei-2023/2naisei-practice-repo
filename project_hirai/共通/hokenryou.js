@@ -1,63 +1,161 @@
 
 
-document.getElementById('kihon1').addEventListener('focus', function () {
+document.getElementById('kihon12').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
-document.getElementById('kihon3').addEventListener('focus', function () {
+document.getElementById('kihon34').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
-
-document.getElementById('bengo1').addEventListener('focus', function () {
-    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
-    this.removeEventListener('blur', hokenryouHandleBlur);
-    this.addEventListener('blur', hokenryouHandleBlur);
-});
-
-
-document.getElementById('hansou1').addEventListener('focus', function () {
+document.getElementById('kihon56').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
 
-document.getElementById('fami1').addEventListener('focus', function () {
+document.getElementById('bengocar12').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
-document.getElementById('dap1').addEventListener('focus', function () {
+document.getElementById('bengocar34').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
-document.getElementById('houzin1').addEventListener('focus', function () {
+document.getElementById('bengocar56').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
-document.getElementById('bengosi1').addEventListener('focus', function () {
+
+document.getElementById('hansou12').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
-document.getElementById('phyd1').addEventListener('focus', function () {
+document.getElementById('hansou34').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
 });
 
-document.getElementById('koshousongai1').addEventListener('focus', function () {
+document.getElementById('hansou56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+
+document.getElementById('fami12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+document.getElementById('fami34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+document.getElementById('fami56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+document.getElementById('dap12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+
+document.getElementById('dap34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+document.getElementById('dap56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+document.getElementById('houzin12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+
+document.getElementById('houzin34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+
+document.getElementById('houzin56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+document.getElementById('bengo12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+document.getElementById('bengo34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+document.getElementById('bengo56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+
+
+document.getElementById('phyd12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+document.getElementById('phyd34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+document.getElementById('phyd56').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+document.getElementById('koshou12').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+document.getElementById('koshou34').addEventListener('focus', function () {
+    // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
+    this.removeEventListener('blur', hokenryouHandleBlur);
+    this.addEventListener('blur', hokenryouHandleBlur);
+});
+document.getElementById('koshou56').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
     this.addEventListener('blur', hokenryouHandleBlur);
@@ -115,7 +213,7 @@ function validateInput(inputId, inputValue) {
             }
 
             // 結果を表示するフィールドにセット
-            document.getElementById('totalResult').value = total;
+            document.getElementById('total12').value = total;
         }
         
         // イベントリスナーを追加
@@ -138,7 +236,7 @@ function validateInput(inputId, inputValue) {
             }
 
             // 結果を表示するフィールドにセット
-            document.getElementById('totalResult1').value = total;
+            document.getElementById('total34').value = total;
         }
         
          // イベントリスナーを追加
@@ -161,7 +259,7 @@ function validateInput(inputId, inputValue) {
             }
 
             // 結果を表示するフィールドにセット
-            document.getElementById('totalResult2').value = total;
+            document.getElementById('total56').value = total;
         }
         
       

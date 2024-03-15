@@ -167,13 +167,13 @@ document.getElementById('keiyaku12').addEventListener('focus', function () {
     this.addEventListener('blur', handleBlur);
 });
 
-document.getElementById('keiyakusha2').addEventListener('focus', function () {
+document.getElementById('keiyaku34').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
 });
 
-document.getElementById('keiyakusha3').addEventListener('focus', function () {
+document.getElementById('keiyaku56').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', handleBlur);
     this.addEventListener('blur', handleBlur);
@@ -290,7 +290,7 @@ function clearSelectionAndInput() {
  }
  
    function validateRow(rowId) {
-            var requiredFields = ["shokenbanngou" + rowId, "meisai" + rowId, "eigyou" + rowId + "_1", "eigyou" + rowId + "_2", "dairi" + rowId + "_1", "dairi" + rowId + "_2", "keiyakusha" + rowId];
+            var requiredFields = ["shouken" + rowId, "meisai" + rowId, "eigyou" + rowId + "_1", "eigyou" + rowId + "_2", "dairi" + rowId + "_1", "dairi" + rowId + "_2", "keiyaku" + rowId];
             var hasInput = false;
 
             // 各行の入力があるかどうかをチェック
