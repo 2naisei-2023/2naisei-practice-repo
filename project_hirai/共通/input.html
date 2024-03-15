@@ -9,7 +9,7 @@
     <script src="hokenryou.js"></script>
 </head>
 <body>
-    <h2>自動車_基本情報</h2>
+    <h2　id="zidousha">自動車_基本情報</h2>
     <hr> <!-- ここで線を追加 -->
     <p>キー番号：変数(未採番の場合は「未採番」) &nbsp;&nbsp;&nbsp;&nbsp;
     作成日：<span id="creationDate"></span></p>
@@ -36,8 +36,8 @@
                 <th>連番</th>
                 <th>証券番号</th>
                 <th>明細番号</th>
-                <th>営業店コード</th>
-                <th>代理店コード</th>
+                <th>営業店コード<br>移管前:上 移管後:下</th>
+                <th>代理店コード<br>移管前:上 移管後:下</th>
                 <th>契約者（団体）コード</th>
                 <th>是正計上区分</th>
                 <th>追加・返還保険料（合計保険料）</th>
@@ -109,17 +109,8 @@
            <!-- 追加保険料 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select id="select1" onchange="updateSelect('select1', 'select2')">
-                                <option value="plus">＋</option>
-                                <option value="minus">－</option>
-                            </select>
-                            <select id="select2" onchange="updateSelect('select2', 'select1')">
-                                <option value="minus">－</option>
-                                 <option value="plus">＋</option>
-                            </select>
-                        </div>
-                         <input type="text" id="total12"readonly>
+                         <input type="text" id="total12" name="total12">
+                         <script src="hokenryou.js"></script>
                     </div>
             </td>
             </td>
@@ -266,17 +257,8 @@
            <!-- 追加保険料 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select id="select3" onchange="updateSelect('select3', 'select4')">
-                                <option value="plus">＋</option>
-                                <option value="minus">－</option>
-                            </select>
-                            <select id="select4" onchange="updateSelect('select4', 'select3')">
-                                <option value="minus">－</option>
-                                 <option value="plus">＋</option>
-                            </select>
-                        </div>
                          <input type="text" id="total34"readonly>
+                         <script src="hokenryou.js"></script>
                     </div>
             </td>
            
@@ -420,17 +402,8 @@
            <!-- 追加保険料 -->
             <td>
                 <div style="display: flex;">
-                        <div style="display: flex; flex-direction: column;">
-                            <select id="select5" onchange="updateSelect('select5', 'select6')">
-                                <option value="plus">＋</option>
-                                <option value="minus">－</option>
-                            </select>
-                            <select id="select6" onchange="updateSelect('select6', 'select5')">
-                                <option value="minus">－</option>
-                                 <option value="plus">＋</option>
-                            </select>
-                        </div>
                          <input type="text" id="total56"readonly>
+                         <script src="hokenryou.js"></script>
                     </div>
             </td>
            
