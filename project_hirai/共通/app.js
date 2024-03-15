@@ -43,7 +43,7 @@ function isAlphaNumeric(inputString) {
 }
 
  
-/*-----------------------------自動車------------------------------------*/
+
 /*英数字と桁数のチェック*/
 /*桁数チェック関数*/
 
@@ -180,10 +180,10 @@ document.getElementById('keiyaku56').addEventListener('focus', function () {
 
 
 function handleBlur() {
-    validateInput(this.id, this.maxLength,);
+    validateInput1(this.id, this.maxLength,);
 }
 
-function validateInput(inputId, expectedLength) {
+function validateInput1(inputId, expectedLength) {
     var inputField = document.getElementById(inputId).value.trim();
     
 
