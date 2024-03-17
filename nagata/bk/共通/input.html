@@ -109,9 +109,10 @@
            <!-- 追加保険料 -->
             <td>
                 <div style="display: flex;">
-                          <input type="text" id="total12" readonly>
+                         <input type="text" id="total12" name="total12">
                          <script src="hokenryou.js"></script>
                     </div>
+            </td>
             </td>
            
             <!-- 基本保険料 -->
@@ -121,6 +122,7 @@
                         <script src="hokenryou.js"></script>
                     </div>
             </td>
+            </td>
             
             <!-- 弁護士自動車 -->
             <td>
@@ -128,6 +130,7 @@
                         <input type="text" class="calculation-input"id="bengocar12" name="bengocar12" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
+            </td>
             </td>
             
             <!-- 搬送 -->
@@ -254,7 +257,7 @@
            <!-- 追加保険料 -->
             <td>
                 <div style="display: flex;">
-                         <input type="text" id="total34" readonly>
+                         <input type="text" id="total34"readonly>
                          <script src="hokenryou.js"></script>
                     </div>
             </td>
@@ -440,7 +443,7 @@
             <!-- 個賠 -->
             <td>
                  <div style="display: flex;">
-                        <input type="text" class="calculation-input2"id="kobai56" name="kobai56" maxlength="11">
+                        <input type="text" class="calculation-input"id="kobai56" name="kobai56" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
             </td>
@@ -450,7 +453,7 @@
             <td>
                 <div style="display: flex;">
                        
-                       <input type="text" class="calculation-input2"id="dap56" name="dap56" maxlength="11">
+                       <input type="text" class="calculation-input"id="dap56" name="dap56" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
             </td>
@@ -458,7 +461,7 @@
            <!-- 法人DA -->
             <td>
                 <div style="display: flex;">
-                        <input type="text" class="calculation-input2"id="houzin56" name="houzin56" maxlength="11">
+                        <input type="text" class="calculation-input"id="houzin56" name="houzin56" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
             </td>
@@ -467,7 +470,7 @@
              <!-- 弁護士 -->
             <td>
                 <div style="display: flex;">
-                       <input type="text" class="calculation-input2"id="bengo56" name="bengo56" maxlength="11">
+                       <input type="text" class="calculation-input"id="bengo56" name="bengo56" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
             </td>
@@ -475,7 +478,7 @@
              <!-- PHYD保険料 -->
              <td>
                 <div style="display: flex;">
-                       <input type="text" class="calculation-inpu2"id="phyd56" name="phyd56" maxlength="11">
+                       <input type="text" class="calculation-input"id="phyd56" name="phyd56" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
             </td>
@@ -483,7 +486,7 @@
             <!-- 故障損害補償保険料　-->
             <td>
                 <div style="display: flex;">
-                        <input type="text" class="calculation-input2"id="koshou56" name="koshou56" maxlength="11">
+                        <input type="text" class="calculation-input"id="koshou56" name="koshou56" maxlength="11">
                         <script src="hokenryou.js"></script>
                     </div>
             </td>
@@ -497,7 +500,7 @@
     <button onclick="pageStartTransition()">開始画面へ</button>
     <button onclick="pageInterruptTransition()">中断保存</button>
     <!-- ボタンが押されたときに`validateForm()`と`pageEndTransition()`の両方の関数を呼び出す -->
-    <button onclick="if(validateRequiredFields()) pageEndTransition()">CSV出力</button>
+    <button onclick="if(validateForm()) pageEndTransition()">CSV出力</button>
 
 </body>
 </html>

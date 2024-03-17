@@ -26,6 +26,6 @@ body {
     }
 }
 
-.error {
-    border: 1px solid red;
+.highlight {
+    border: 2px solid red;
 }

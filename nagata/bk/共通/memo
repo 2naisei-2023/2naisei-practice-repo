@@ -1,0 +1,19 @@
+<th>連番</th>2
+                <th>証券番号</th> choshokenbanngou12
+                <th>明細番号</th> chomeisai12
+                <th>補償種目</th> hoshou12
+                <th>種目種類コード</th> shumoku12
+                <th>営業店コード</th> choeigyou1
+                <th>代理店コード</th> chodairi1
+                <th>契約者（団体）コード</th> chokeiyakusha1
+                <th>是正計上区分</th>
+                <th>追加・返還保険料（合計保険料）</th> chototalResult
+                <th>基本保険料</th> chokihon1
+                <th>地震上乗保険料</th> zisinuwa1
+                <th>地震保険料</th> zisin1
+                <th>搬送応急・レンタ費用等補償保険料</th> chohansou1
+                <th>ファミバイ保険料</th> chofami1
+                <th>DAP保険料</th> chodap1
+                <th>ホームサイバー・特定設備水災・水災初期費用保険料</th> home1
+                <th>故障損害補償保険料</th>chokoshou1
+            </tr>

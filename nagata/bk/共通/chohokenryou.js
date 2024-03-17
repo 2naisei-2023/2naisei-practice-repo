@@ -175,30 +175,32 @@ function validateInput1(inputId, inputValue) {
     }
 }
 
-          // イベントリスナーを追加
+
+
+ // イベントリスナーを追加
         var calculationInputs = document.getElementsByClassName('calculation-input');
         for (var i = 0; i < calculationInputs.length; i++) {
             calculationInputs[i].addEventListener('input', calculateTotal);
         }
-        
+
         // 合計を計算する関数
         function calculateTotal() {
             var total = 0;
-        
+
             for (var i = 0; i < calculationInputs.length; i++) {
                 var inputValue = calculationInputs[i].value.trim();
-        
+
                 // 空白でない場合、数値に変換して合計に加算
                 if (inputValue !== "") {
                     total += parseFloat(inputValue);
                 }
             }
-        
+
             // 結果を表示するフィールドにセット
             document.getElementById('cho_total12').value = total;
         }
         
-        // イベントリスナーを追加
+         // イベントリスナーを追加
         var calculationInputs1 = document.getElementsByClassName('calculation-input1');
         for (var i = 0; i < calculationInputs1.length; i++) {
             calculationInputs1[i].addEventListener('input', calculateTotal1);
@@ -221,7 +223,7 @@ function validateInput1(inputId, inputValue) {
             document.getElementById('cho_total34').value = total;
         }
         
-         // イベントリスナーを追加
+          // イベントリスナーを追加
         var calculationInputs2 = document.getElementsByClassName('calculation-input2');
         for (var i = 0; i < calculationInputs2.length; i++) {
             calculationInputs2[i].addEventListener('input', calculateTotal2);

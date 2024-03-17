@@ -102,25 +102,37 @@
                 </td>
                 <!--是正区分-->
                 <td> 
-                    <div style="display: flex; flex-direction: column;">
-                        <select id="cho_zesei12">
-                            <option value="item0"> </option>
-                            <option value="item1">保険料返還案件</option>
-                            <option value="item2">保険料追加並びに増減なし案件</option>
-                        </select>
+                　 <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <select id="cho_zesei12">
+                                <option value="item0"> </option>
+                                <option value="item1">保険料返還案件</option>
+                                <option value="item2">保険料追加並びに増減なし案件</option>
+                            </select>
+                           
+                        
                     </div>
                 </td>
                 <!--追加・返還保険料-->
-                <td>
-                    <div style="display: flex;">
+                <td> 
+                　 <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <select id="select1" onchange="updateSelect('select1', 'select2')">
+                                <option value="plus">＋</option>
+                                <option value="minus">－</option>
+                            </select>
+                            <select id="select2" onchange="updateSelect('select2', 'select1')">
+                                <option value="minus">－</option>
+                                 <option value="plus">＋</option>
+                            </select>
+                        </div>
                          <input type="text" id="cho_total12"readonly>
-                         <script src="chohokenryou.js"></script>
                     </div>
                 </td>
                 <!--基本保険料-->
                 <td> 
-                    <div style="display: flex;">
-                        <input type="text" class="calculation-input" id="cho_kihon12" name="cho_kihon12" maxlength="11">
+                　 <div style="display: flex;">
+                         <input type="text" class="calculation-input" id="cho_kihon1" name="cho_kihon1" maxlength="11">
                         <script src="chohokenryou.js"></script>
                     </div>
                 </td>
@@ -170,11 +182,12 @@
                 </td>
                 <!--故障損害補償保険料-->
                 <td> 
-                    <div style="display: flex;">
-                        <input type="text" class="calculation-input" id="cho_koshou12" name="cho_koshou12" maxlength="11">
-                        <script src="chohokenryou.js"></script>
+                　  <div style="display: flex;">
+                       <input type="text"class="calculation-input" id="cho_koshou12" name="cho_koshou12" maxlength="11">
+                <script src="chohokenryou.js"></script>
                     </div>
                 </td>
+                
            </tr>
            
            <!--2行目-->
@@ -214,33 +227,46 @@
                 <!--契約者コード-->
                 <td> 
                     <input type="text" id="cho_keiyaku34" name="cho_keiyaku34" maxlength="5">
-                    <script src="appcho.js"></script>
+                 <script src="appcho.js"></script>
                 </td>
                 <!--是正区分-->
                 <td> 
-                    <div style="display: flex; flex-direction: column;">
-                        <select id="cho_zesei34">
-                            <option value="item0"> </option>
-                            <option value="item1">保険料返還案件</option>
-                            <option value="item2">保険料追加並びに増減なし案件</option>
-                        </select>
+                　 <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <select id="cho_zesei34">
+                                <option value="item0"> </option>
+                                <option value="item1">保険料返還案件</option>
+                                <option value="item2">保険料追加並びに増減なし案件</option>
+                            </select>
+                           
+                        
                     </div>
                 </td>
                 <!--追加・返還保険料-->
-                <td>
-                    <div style="display: flex;">
-                        <input type="text" id="cho_total34" readonly>
-                        <script src="chohokenryou.js"></script>
-                    </div>
-                </td>
-                <!--基本保険料-->
                 <td> 
-                    <div style="display: flex;">
-                        <input type="text" class="calculation-input1" id="cho_kihon34" name="cho_kihon34" maxlength="11">
-                        <script src="chohokenryou.js"></script>
+                　 <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <select id="select1" onchange="updateSelect('select1', 'select2')">
+                                <option value="plus">＋</option>
+                                <option value="minus">－</option>
+                            </select>
+                            <select id="select2" onchange="updateSelect('select2', 'select1')">
+                                <option value="minus">－</option>
+                                 <option value="plus">＋</option>
+                            </select>
+                        </div>
+                         <input type="text" id="cho_total34"readonly>
                     </div>
                 </td>
                 
+                <!--基本保険料-->
+            
+                <td> 
+                　 <div style="display: flex;">
+                         <input type="text" class="calculation-input1" id="cho_kihon34" name="cho_kihon34" maxlength="11">
+                        <script src="chohokenryou.js"></script>
+                    </div>
+                </td>
                 <!--地震上乗せ保険料-->
                 <td> 
                  <div style="display: flex;">
@@ -287,9 +313,9 @@
                 </td>
                 <!--故障損害補償保険料-->
                 <td> 
-                    <div style="display: flex;">
-                        <input type="text" class="calculation-input1" id="cho_koshou34" name="cho_koshou34" maxlength="11">
-                        <script src="chohokenryou.js"></script>
+                　  <div style="display: flex;">
+                       <input type="text"class="calculation-input1" id="cho_koshou34" name="cho_koshou34" maxlength="11">
+                <script src="chohokenryou.js"></script>
                     </div>
                 </td>
            </tr>
@@ -335,25 +361,39 @@
                 </td>
                 <!--是正区分-->
                 <td> 
-                    <div style="display: flex; flex-direction: column;">
-                        <select id="cho_zesei56">
-                            <option value="item0"> </option>
-                            <option value="item1">保険料返還案件</option>
-                            <option value="item2">保険料追加並びに増減なし案件</option>
-                        </select>
+                　 <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <select id="zesei56">
+                                <option value="item0"> </option>
+                                <option value="item1">保険料返還案件</option>
+                                <option value="item2">保険料追加並びに増減なし案件</option>
+                            </select>
+                           
+                        
                     </div>
                 </td>
                 <!--追加・返還保険料-->
-                <td>
-                    <div style="display: flex;">
-                        <input type="text" id="cho_total56" readonly>
-                        <script src="chohokenryou.js"></script>
+                <td> 
+                　 <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <select id="select1" onchange="updateSelect('select1', 'select2')">
+                                <option value="plus">＋</option>
+                                <option value="minus">－</option>
+                            </select>
+                            <select id="select2" onchange="updateSelect('select2', 'select1')">
+                                <option value="minus">－</option>
+                                 <option value="plus">＋</option>
+                            </select>
+                        </div>
+                         <input type="text" id="cho_total56"readonly>
                     </div>
                 </td>
+                
                 <!--基本保険料-->
+            
                 <td> 
-                    <div style="display: flex;">
-                        <input type="text" class="calculation-input2" id="cho_kihon56" name="cho_kihon56" maxlength="11">
+                　 <div style="display: flex;">
+                         <input type="text" class="calculation-input2" id="cho_kihon56" name="cho_kihon56" maxlength="11">
                         <script src="chohokenryou.js"></script>
                     </div>
                 </td>
@@ -403,9 +443,9 @@
                 </td>
                 <!--故障損害補償保険料-->
                 <td> 
-                    <div style="display: flex;">
-                        <input type="text" class="calculation-input2" id="cho_koshou56" name="cho_koshou56" maxlength="11">
-                        <script src="chohokenryou.js"></script>
+                　  <div style="display: flex;">
+                       <input type="text"class="calculation-input2" id="cho_koshou56" name="cho_koshou56" maxlength="11">
+                <script src="chohokenryou.js"></script>
                     </div>
                 </td>
            </tr>
@@ -414,9 +454,10 @@
         </tbody>    
     </table>
    
-    <button onclick="pageStartTransition()">開始画面へ</button>
+     <button onclick="pageStartTransition()">開始画面へ</button>
     <button onclick="pageInterruptTransition()">中断保存</button>
-    <button onclick="if(validateRequiredFields()) pageEndTransition()">CSV出力</button>
+    <button onclick="pageEndTransition()">CSV出力</button>
+
 
 </body>
 </html>

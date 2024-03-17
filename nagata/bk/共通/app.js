@@ -288,91 +288,54 @@ function clearSelectionAndInput() {
             }
  }
  
-var isFirstValidation = true; // 最初の呼び出し時のフラグ
+   function validateRow(rowId) {
+            var requiredFields = ["shouken" + rowId, "meisai" + rowId, "eigyou" + rowId + "_1", "eigyou" + rowId + "_2", "dairi" + rowId + "_1", "dairi" + rowId + "_2", "keiyaku" + rowId];
+            var hasInput = false;
 
-function validateRequiredFields() {
-    isFirstValidation = true; // フラグをリセット
-    
-    var requiredFields1 = ["shouken12", "meisai12", "eigyou1", "eigyou2", "dairi1", "dairi2", "kihon12"];
-    var requiredFields2 = ["shouken34", "meisai34", "eigyou3", "eigyou4", "dairi3", "dairi4", "kihon34"];
-    var requiredFields3 = ["shouken56", "meisai56", "eigyou5", "eigyou6", "dairi5", "dairi6", "kihon56"];
-    
-    var isFields1Valid = isAnyInputInGroup(requiredFields1);
-    var isFields2Valid = isAnyInputInGroup(requiredFields2);
-    var isFields3Valid = isAnyInputInGroup(requiredFields3);
-    
-    // 入力のあるグループのみを考慮し、必須項目が全て埋まっている場合に true を返す
-    if ((isFields1Valid && isAllRequiredFieldsFilled(requiredFields1)) ||
-        (isFields2Valid && isAllRequiredFieldsFilled(requiredFields2)) ||
-        (isFields3Valid && isAllRequiredFieldsFilled(requiredFields3))) {
-    return true;
-}
-    
-    // requiredFields1のチェック
-    if (isFields1Valid) {
-        validateGroup(requiredFields1);
-    } else {
-        resetGroup(requiredFields1); // 入力がない場合は赤色の枠をリセット
-    }
-    
-    // requiredFields2のチェック
-    if (isFields2Valid) {
-        validateGroup(requiredFields2);
-    } else {
-        resetGroup(requiredFields2); // 入力がない場合は赤色の枠をリセット
-    }
-    
-    // requiredFields3のチェック
-    if (isFields3Valid) {
-        validateGroup(requiredFields3);
-    } else {
-        resetGroup(requiredFields3); // 入力がない場合は赤色の枠をリセット
-    }
-    
-    return false; // 未入力がある場合は false を返す
-}
-
-function isAnyInputInGroup(group) {
-    // グループ内のいずれかの入力があるかどうかをチェック
-    return group.some(function(fieldId) {
-        return document.getElementById(fieldId).value.trim() !== "";
-    });
-}
-
-function validateGroup(group) {
-    group.forEach(function(fieldId) {
-        var field = document.getElementById(fieldId);
-        if (field.value.trim() === "") {
-            // 最初の呼び出し時のみポップアップを表示
-            if (isFirstValidation) {
-                alert("必須項目が未入力です。");
-                isFirstValidation = false; // 最初の呼び出し後はフラグをfalseに設定
+            // 各行の入力があるかどうかをチェック
+            for (var i = 0; i < requiredFields.length; i++) {
+                var field = document.getElementById(requiredFields[i]);
+                if (field.value.trim() !== "") {
+                    hasInput = true;
+                    break;
+                }
             }
-            // 未入力の場合は赤色の枠を追加
-            field.classList.add("error");
-        } else {
-            // 入力がある場合は赤色の枠を削除
-            field.classList.remove("error");
+
+            // 入力がある場合に他の必須項目のチェックを行う
+            if (hasInput) {
+                var isValid = true;
+
+                for (var i = 0; i < requiredFields.length; i++) {
+                    var field = document.getElementById(requiredFields[i]);
+
+                    if (field.value.trim() === "") {
+                        // エラー時に赤色の枠を追加
+                        field.classList.add("error");
+                        isValid = false;
+                    } else {
+                        // エラー解消時に赤色の枠を削除
+                        field.classList.remove("error");
+                    }
+                }
+
+                return isValid;
+            }
+
+            // 入力がない場合は常に true を返す
+            return true;
         }
-    });
-}
 
-function resetGroup(group) {
-    group.forEach(function(fieldId) {
-        var field = document.getElementById(fieldId);
-        field.classList.remove("error"); // 赤色の枠を削除
-    });
-}
+        function validateForm() {
+            var isValid = true;
+            var numRows = 3;
 
-function isAllRequiredFieldsFilled(group) {
-    return group.every(function(fieldId) {
-        return document.getElementById(fieldId).value.trim() !== "";
-    });
-}
+            for (var row = 1; row <= numRows; row++) {
+                if (!validateRow(row)) {
+                    isValid = false;
+                }
+            }
 
-
-
-
-
+            return isValid;
+        }
 
 
