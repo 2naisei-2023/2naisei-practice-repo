@@ -36,8 +36,8 @@
                 <th>明細番号</th>
                 <th>補償種目</th>
                 <th>種目種類コード</th>
-                <th>営業店コード</th>
-                <th>代理店コード</th>
+                <th>営業店コード<br>移管前:上 移管後:下</th>
+                <th>代理店コード<br>移管前:上 移管後:下</th>
                 <th>契約者（団体）コード</th>
                 <th>是正計上区分</th>
                 <th>追加・返還保険料（合計保険料）</th>
@@ -409,14 +409,12 @@
                     </div>
                 </td>
            </tr>
-           
-           
         </tbody>    
     </table>
    
-    <button onclick="pageStartTransition()">開始画面へ</button>
-    <button onclick="pageInterruptTransition()">中断保存</button>
-    <button onclick="if(validateRequiredFields()) pageEndTransition()">CSV出力</button>
+   <button onclick="pageStartTransition()">開始画面へ</button>
+   <button onclick="pageInterruptTransition()">中断保存</button>
+   <button onclick="if(validateRequiredFields()) pageEndTransition()">CSV出力</button>
 
-</body>
+    </body>
 </html>

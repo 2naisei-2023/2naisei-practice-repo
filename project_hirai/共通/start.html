@@ -24,12 +24,15 @@
 
     <h2>中断再開</h2>
     <hr> <!-- ここで線を追加 -->
-    <p>中断再開する特殊計上番号を入力し【中断再開】ボタンをクリックしてください。</p>
+    <p>中断再開する特殊計上番号を入力し【入力開始】ボタンをクリックしてください。</p>
     <div class="input-control">
         <label for="FirstName" class="form-label required">キー番号</label>
         <input type="text" id="FirstName" name="FirstName" value="" class="form-input" onchange="updateInputStatus()" maxlength=8>
     </div>
     <!-- ボタンが押されたときに`transition.js`の`pageTransition()`関数を呼び出す -->
+    <br>
+    <br>
+    
     <button onclick="validateAndAlert()">入力開始</button>
     <!-- クリアボタン -->
    <button onclick="clearSelectionAndInput()">クリア</button>
