@@ -34,14 +34,14 @@
         <thead>
             <tr>
                 <th>連番</th>
-                <th>証券番号</th>
-                <th>明細番号</th>
-                <th>営業店コード<br>移管前:上 移管後:下</th>
-                <th>代理店コード<br>移管前:上 移管後:下</th>
+                <th>証券番号<br><span style="font-size: x-small; color: red;">※必須</span></th>
+                <th>明細番号<br><span style="font-size: x-small; color: red;">※必須</span></th>
+                <th>営業店コード<br>移管前:上 移管後:下<br><span style="font-size: x-small; color: red;">※必須</span></th>
+                <th>代理店コード<br>移管前:上 移管後:下<br><span style="font-size: x-small; color: red;">※必須</span></th>
                 <th>契約者（団体）コード</th>
                 <th>是正計上区分</th>
                 <th>追加・返還保険料（合計保険料）</th>
-                <th>基本保険料</th>
+                <th>基本保険料<span style="font-size: x-small; color: red;">※必須</span></th>
                 <th>弁護士自動車保険料</th>
                 <th>搬送応急・連多費用等補償保険料</th>
                 <th>ファミバイ保険料</th>
@@ -493,6 +493,7 @@
 </table>
         
     </table>
+    
     <!-- ボタンが押されたときに`transition.js`の`pageTransition()`関数を呼び出す -->
     <button onclick="pageStartTransition()">開始画面へ</button>
     <button onclick="pageInterruptTransition()">中断保存</button>
