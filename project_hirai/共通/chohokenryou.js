@@ -53,6 +53,7 @@ document.getElementById('cho_zishin56').addEventListener('focus', function () {
 });
 
 
+
 document.getElementById('cho_hansou12').addEventListener('focus', function () {
     // 一時的にblurイベントを無効にし、focusが外れる前に再度有効にする
     this.removeEventListener('blur', hokenryouHandleBlur);
